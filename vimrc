@@ -6,6 +6,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-rails'
 Plug 'romainl/apprentice'
 Plug 'scrooloose/nerdtree'
 Plug 'yggdroot/indentline'
@@ -56,8 +58,9 @@ let g:indentLine_char                     = '¦'
 
 " ------ mappings ------
 " buffergator
-nmap <leader>jj :BuffergatorMruCyclePrev<cr>
-nmap <leader>kk :BuffergatorMruCycleNext<cr>
+nmap q :BuffergatorMruCyclePrev<cr>
+nmap w :BuffergatorMruCycleNext<cr>
+nmap x :BuffergatorTabsClose<cr>
 nmap <leader>bl :BuffergatorOpen<cr>
 
 " vim move
@@ -65,16 +68,19 @@ vnoremap < <gv
 vnoremap > >gv
 
 " FZF
-nnoremap <silent> <C-p> :FZF<CR>
 nnoremap <silent> <C-f> :Ag<CR>
+nnoremap <silent> <C-p> :FZF<CR>
 
 " better search
 noremap <plug>(slash-after) zz
 
 " nerdtree
-nmap <leader>n  :NERDTree<cr>
 nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
+nmap <leader>n  :NERDTree<cr>
 map <C-n>       :NERDTreeToggle<cr>
+
+" go to line
+:nnoremap <CR> G
 
 " cgn
 nnoremap <Leader>x *``cgn
@@ -115,4 +121,8 @@ augroup cursorline
 augroup END
 
 " ------ colorscheme ------
-colorscheme apprentice
+" colorscheme apprentice
+colorscheme afterglow
+
+set t_Co=256
+
