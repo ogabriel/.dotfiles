@@ -98,6 +98,12 @@ let g:goyo_height=95
 vnoremap <C-c> "*y :let @+=@*<CR>
 map <C-v> "+P
 
+" ctrl + s to save files
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+
+
 if !has('nvim')
   if exists('$TMUX')
     let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
