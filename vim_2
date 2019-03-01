@@ -1,0 +1,261 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-rails'
+Plug 'romainl/apprentice'
+Plug 'scrooloose/nerdtree'
+Plug 'yggdroot/indentline'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'vim-airline/vim-airline'
+Plug 'djoshea/vim-autoread'
+Plug 'matze/vim-move'
+Plug 'qpkorr/vim-bufkill'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-sleuth'
+Plug 'ervandew/supertab'
+Plug 'junegunn/vim-slash'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'junegunn/goyo.vim'
+
+call plug#end()
+
+" ------ sensible defaults ------
+let mapleader = "\<Space>"
+set hlsearch
+set incsearch
+set number
+set noswapfile
+set hidden
+set wrap!
+set splitbelow splitright
+set clipboard=unnamedplus
+set visualbell
+set mouse=a
+set lazyredraw
+if has('mouse_sgr')
+    set ttymouse=sgr
+endif
+set wildmode=longest,list,full
+
+
+" ------ extra config ------
+let g:airline#extensions#tabline#enabled  = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_section_y = '%{strftime("%H:%M")}'
+let g:buffergator_suppress_keymaps        = 1
+let g:buffergator_mru_cycle_loop          = 1
+let g:buffergator_viewport_split_policy   = 'R'
+let g:NERDTreeWinSize                     = 30
+let g:move_key_modifier                   = 'C'
+let g:indentLine_char                     = '¦'
+
+" ------ mappings ------
+" buffergator
+nmap q :BuffergatorMruCyclePrev<cr>
+nmap w :BuffergatorMruCycleNext<cr>
+"nnoremap tk  :tabnext<CR>
+"nnoremap tj  :tabprev<CR>
+"nnoremap tt  :tabedit<Space>
+"nnoremap tn  :tabnext<Space>
+"nnoremap tm  :tabm<Space>
+"nnoremap td  :tabclose<CR>
+
+nmap <leader>bl :BuffergatorOpen<cr>
+
+" vim move
+vnoremap < <gv
+vnoremap > >gv
+
+" FZF
+nnoremap <silent> <C-f> :Ag<CR>
+nnoremap <silent> <C-p> :FZF<CR>
+
+" better search
+noremap <plug>(slash-after) zz
+
+" nerdtree
+" nmap <C-n> :NERDTreeFocus<cr>n<c-w><c-p>
+map <C-n>       :NERDTreeToggle<cr>
+
+" go to line
+:nnoremap <CR> G
+
+" cgn
+nnoremap <Leader>x *``cgn
+nnoremap <Leader>X #``cgN
+
+" goyo reading mode
+map <C-a> :Goyo<CR>
+let g:goyo_width=100
+let g:goyo_height=95
+
+" this is god work (ctrl c and v)
+" instructions: install gvim and to that:
+vnoremap <C-c> "*y :let @+=@*<CR>
+map <C-v> "+P
+
+" splits
+noremap <silent> <A-v> :vsplit<CR>
+map <silent> <A-h> :split<CR>
+
+" ctrl + s to save files
+noremap <silent> <C-S> :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>        <esc><C-O>:update<CR>
+
+
+if !has('nvim')
+  if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
+    let &t_SR = "\<Esc>Ptmux;\<Esc>\e[4 q\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+  else
+    let &t_SI = "\e[6 q"
+    let &t_SR = "\e[4 q"
+    let &t_EI = "\e[2 q"
+  endif
+endif
+
+" swap lines
+function! s:swap_lines(n1, n2)
+    let line1 = getline(a:n1)
+    let line2 = getline(a:n2)
+    call setline(a:n1, line2)
+    call setline(a:n2, line1)
+endfunction
+
+function! s:swap_up()
+    let n = line('.')
+    if n == 1
+        return
+    endif
+
+    call s:swap_lines(n, n - 1)
+    exec n - 1
+endfunction
+
+function! s:swap_down()
+    let n = line('.')
+    if n == line('$')
+        return
+    endif
+
+    call s:swap_lines(n, n + 1)
+    exec n + 1
+endfunction
+
+noremap <silent> <A-up> :call <SID>swap_up()<CR>
+noremap <silent> <A-down> :call <SID>swap_down()<CR>
+
+" Delete buffer while keeping window layout (don't close buffer's windows).
+" Version 2008-11-18 from http://vim.wikia.com/wiki/VimTip165
+if v:version < 700 || exists('loaded_bclose') || &cp
+  finish
+endif
+let loaded_bclose = 1
+if !exists('bclose_multiple')
+  let bclose_multiple = 1
+endif
+
+" Display an error message.
+function! s:Warn(msg)
+  echohl ErrorMsg
+  echomsg a:msg
+  echohl NONE
+endfunction
+
+" Command ':Bclose' executes ':bd' to delete buffer in current window.
+" The window will show the alternate buffer (Ctrl-^) if it exists,
+" or the previous buffer (:bp), or a blank buffer if no previous.
+" Command ':Bclose!' is the same, but executes ':bd!' (discard changes).
+" An optional argument can specify which buffer to close (name or number).
+function! s:Bclose(bang, buffer)
+  if empty(a:buffer)
+    let btarget = bufnr('%')
+  elseif a:buffer =~ '^\d\+$'
+    let btarget = bufnr(str2nr(a:buffer))
+  else
+    let btarget = bufnr(a:buffer)
+  endif
+  if btarget < 0
+    call s:Warn('No matching buffer for '.a:buffer)
+    return
+  endif
+  if empty(a:bang) && getbufvar(btarget, '&modified')
+    call s:Warn('No write since last change for buffer '.btarget.' (use :Bclose!)')
+    return
+  endif
+  " Numbers of windows that view target buffer which we will delete.
+  let wnums = filter(range(1, winnr('$')), 'winbufnr(v:val) == btarget')
+  if !g:bclose_multiple && len(wnums) > 1
+    call s:Warn('Buffer is in multiple windows (use ":let bclose_multiple=1")')
+    return
+  endif
+  let wcurrent = winnr()
+  for w in wnums
+    execute w.'wincmd w'
+    let prevbuf = bufnr('#')
+    if prevbuf > 0 && buflisted(prevbuf) && prevbuf != btarget
+      buffer #
+    else
+      bprevious
+    endif
+    if btarget == bufnr('%')
+      " Numbers of listed buffers which are not the target to be deleted.
+      let blisted = filter(range(1, bufnr('$')), 'buflisted(v:val) && v:val != btarget')
+      " Listed, not target, and not displayed.
+      let bhidden = filter(copy(blisted), 'bufwinnr(v:val) < 0')
+      " Take the first buffer, if any (could be more intelligent).
+      let bjump = (bhidden + blisted + [-1])[0]
+      if bjump > 0
+        execute 'buffer '.bjump
+      else
+        execute 'enew'.a:bang
+      endif
+    endif
+  endfor
+  execute 'bdelete'.a:bang.' '.btarget
+  execute wcurrent.'wincmd w'
+endfunction
+command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-args>)
+noremap <silent> <C-x> :Bclose<CR>
+
+" ------ autocmd ------
+" rainbow parens
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" trailing white space
+autocmd BufWritePre * %s/\s\+$//e
+
+ " when quitting a file, save the cursor position
+augroup save_cursor_position
+    autocmd!
+    autocmd BufReadPost * call setpos(".", getpos("'\""))
+augroup END
+
+ " enable cursorline in the currently active window
+augroup cursorline
+    autocmd!
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+augroup END
+
+" ------ colorscheme ------
+" colorscheme apprentice
+colorscheme afterglow
+
+set t_Co=256
+
