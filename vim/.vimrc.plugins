@@ -53,7 +53,7 @@ Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 Plug 'shime/vim-livedown', { 'for': 'markdown' }        " real time markdown editing
 
 " theme
-Plug 'w0ng/vim-hybrid'                                  " theme
+Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'                          " status line
 
 " repl
