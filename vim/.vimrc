@@ -24,7 +24,6 @@ set wildmode=longest,list,full
 " ------ extra config ------
 let g:airline#extensions#tabline#enabled  = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='oceanicnext'
 let g:airline_section_y = '%{strftime("%H:%M")}'
 let g:airline_section_warning             = ''
 let g:airline_detect_crypt                = 0
@@ -35,7 +34,10 @@ let g:NERDTreeWinSize                     = 30
 let NERDTreeShowHidden                    = 1
 let g:move_key_modifier                   = 'A'
 let g:indentLine_char                     = '¦'
-colorscheme OceanicNext
+
+" ------ themes config ------
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 
 " ------ mappings ------
 

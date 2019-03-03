@@ -53,9 +53,10 @@ Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 Plug 'shime/vim-livedown', { 'for': 'markdown' }        " real time markdown editing
 
 " theme
-Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'                          " status line
-
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'mhartington/oceanic-next'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 " repl
 Plug 'metakirby5/codi.vim'
 
@@ -70,8 +71,8 @@ map <leader><leader> :NERDTreeToggle<CR>
 map <leader>c :NERDTreeFind<CR>
 " cd by updating NERDTree current directory and iTerm title
 command! -bar -nargs=1 -complete=file CD execute ":cd " . fnamemodify(<q-args>, ':p:h') .
-  \ " | NERDTree " . fnamemodify(<q-args>, ':p:h') . " | NERDTreeToggle" .
-  \ " | :silent !title_pwd" | execute ":redraw!"
+\ " | NERDTree " . fnamemodify(<q-args>, ':p:h') . " | NERDTreeToggle" .
+\ " | :silent !title_pwd" | execute ":redraw!"
 
 " jump to defenition with fireplace
 nnoremap <C-[><C-[> [<C-d>
@@ -95,27 +96,27 @@ let g:undotree_SetFocusWhenToggle = 1
 
 " alternate files
 function! AltCommand(path, vim_command)
-  let l:alternate = system("gfind . -name '*.rb' -type f -print0 | alt " . a:path)
-  if empty(l:alternate)
-    echo "No alternate file for " . a:path . " exists!"
-  else
-    exec a:vim_command . " " . l:alternate
-  endif
+let l:alternate = system("gfind . -name '*.rb' -type f -print0 | alt " . a:path)
+if empty(l:alternate)
+  echo "No alternate file for " . a:path . " exists!"
+else
+  exec a:vim_command . " " . l:alternate
+endif
 endfunction
 nnoremap <Leader>o :call AltCommand(expand('%'), ':e')<CR>
 
 " Plug load some plugins not while starting vim
 augroup lazy_load
-  autocmd!
-  autocmd! InsertEnter * call plug#load('deoplete.nvim', 'delimitMate', 'vim-endwise', 'neosnippet')
-                      \| if exists('g:loaded_deoplete')
-                      \|   call deoplete#enable()
-                      \| endif
+autocmd!
+autocmd! InsertEnter * call plug#load('deoplete.nvim', 'delimitMate', 'vim-endwise', 'neosnippet')
+                    \| if exists('g:loaded_deoplete')
+                    \|   call deoplete#enable()
+                    \| endif
 augroup END
 
 augroup custom_types
-  autocmd!
-  autocmd FileType javascript call plug#load('yajs.vim', 'vim-jsx')
+autocmd!
+autocmd FileType javascript call plug#load('yajs.vim', 'vim-jsx')
 augroup END
 
 " vim-indent-guides
@@ -133,11 +134,11 @@ let g:deoplete#auto_refresh_delay = 0
 let g:neocomplete#min_pattern_length = 2
 
 " <TAB>: completion
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " multiple cursors
-let g:multi_cursor_start_key='<C-n>'
-let g:multi_cursor_start_word_key='g<C-n>'
+" let g:multi_cursor_start_key='<C-n>'
+" let g:multi_cursor_start_word_key='g<C-n>'
 
 " rspec command
 let g:rspec_runner = "os_x_iterm2"
@@ -163,7 +164,7 @@ let g:neosnippet#disable_runtime_snippets = {
 \   '_' : 1,
 \ }
 " expand snippet on TAB or switch to the next suggestion with deoplete
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+" imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " THEME CONFIGS
  syntax enable
@@ -174,5 +175,3 @@ imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expan
  if (has("termguicolors"))
    set termguicolors
  endif
-
-
