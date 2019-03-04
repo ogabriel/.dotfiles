@@ -72,7 +72,7 @@ nnoremap <Leader>x *``cgn
 nnoremap <Leader>X #``cgN
 
 " goyo reading mode
-map <C-a> :Goyo<CR>
+map <C-b> :Goyo<CR>
 let g:goyo_width=100
 let g:goyo_height=95
 
