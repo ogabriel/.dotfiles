@@ -1,6 +1,6 @@
 cd
 
 # remove these manualy
-echo 'source $HOME/dotfiles/bash/.bashrc' >> $HOME/.bashrc
+echo 'source ~/dotfiles/bash/.bashrc' >> ~/.bashrc
 
-source $HOME/.bashrc
+source ~/.bashrc
