@@ -3,14 +3,14 @@
 cd
 
 # creating the backup folder for the original ones
-mkdir dotfiles_backup
-mv .vimrc dotfiles_backup
-mv .vimrc.plugins dotfiles_backup
-mv .tmux.conf dotfiles_backup
-mv .tmux.conf.local dotfiles_backup
+mkdir .dotfiles_backup
+mv .vimrc .dotfiles_backup
+mv .vimrc.plugins .dotfiles_backup
+mv .tmux.conf .dotfiles_backup
+mv .tmux.conf.local .dotfiles_backup
 
 # just adding a source to the files at HOME, to redirect to the dotfile configuration
-ln -sf $HOME/dotfiles/vim/.vimrc .vimrc
-ln -sf $HOME/dotfiles/vim/.vimrc.plugins .vimrc.plugins
-ln -sf $HOME/dotfiles/tmux/.tmux.conf .tmux.conf
-ln -sf $HOME/dotfiles/tmux/.tmux.conf.local .tmux.conf.local
+ln -sf ~/.dotfiles/vim/.vimrc .vimrc
+ln -sf ~/.dotfiles/vim/.vimrc.plugins .vimrc.plugins
+ln -sf ~/.dotfiles/tmux/.tmux.conf .tmux.conf
+ln -sf ~/.dotfiles/tmux/.tmux.conf.local .tmux.conf.local
