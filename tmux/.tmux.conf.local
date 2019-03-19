@@ -180,7 +180,7 @@ tmux_conf_theme_right_separator_sub='|'
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=' ❐ #S | ↑#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} #(curl wttr.in?format=3), %R , %d %b | #{username}#{root} | #{hostname} '
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} #(curl wttr.in?format=3) | , %R , %d %b | #{username}#{root} '
 
 # good color scheme to try out:
 #7a6c5d Deep Taupe
@@ -189,7 +189,7 @@ tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_stat
 #dbac9b khaki
 #c17c74 old rose
 tmux_conf_theme_status_left_bg='#7a6c5d,#bcac9b,#c17c74'  # yellow, pink, white blue
-tmux_conf_theme_status_right_bg='#e4e4e4,#ddc9b4,#c17c74' # dark gray, red, white
+tmux_conf_theme_status_right_bg='#000000,#e4e4e4,#ddc9b4,#c17c74' # dark gray, red, white
 
 # status left style
 tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
@@ -197,7 +197,7 @@ tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#000000,#000000,#e4e4e4' # light gray, white, black
+tmux_conf_theme_status_right_fg='#000000,#000000,#000000,#e4e4e4' # light gray, white, black
 # tmux_conf_theme_status_right_bg='#666666,#080808,#d70000' # dark gray, red, white
 tmux_conf_theme_status_right_attr='none,none,bold'
 
