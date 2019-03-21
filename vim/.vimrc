@@ -20,6 +20,7 @@ if has('mouse_sgr')
     set ttymouse=sgr
 endif
 set wildmode=longest,list,full
+set noshowcmd noruler
 
 " ------ extra config ------
 let g:airline#extensions#tabline#enabled  = 1
@@ -124,5 +125,4 @@ augroup cursorline
     autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
     autocmd WinLeave * setlocal nocursorline
 augroup END
-
 
