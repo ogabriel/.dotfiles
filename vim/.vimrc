@@ -35,6 +35,13 @@ let g:NERDTreeWinSize                     = 30
 let NERDTreeShowHidden                    = 1
 let g:move_key_modifier                   = 'A'
 let g:indentLine_char                     = '¦'
+" for vim 7
+" set t_Co=256
+
+" for vim 8
+ if (has("termguicolors"))
+   set termguicolors
+ endif
 
 " ------ themes config ------
 colorscheme onehalfdark
@@ -50,9 +57,11 @@ vnoremap < <gv
 vnoremap > >gv
 
 " buffergator
-nmap q :BuffergatorMruCyclePrev<cr>
-nmap w :BuffergatorMruCycleNext<cr>
-nmap <leader>bl :BuffergatorOpen<cr>
+" nmap q :BuffergatorMruCyclePrev<cr>
+" nmap w :BuffergatorMruCycleNext<cr>
+" nmap <leader>bl :BuffergatorOpen<cr>
+map <C-h> :bn<cr>
+map <C-l> :bp<cr>
 
 " FZF
 nnoremap <silent> <C-f> :Ag<CR>
