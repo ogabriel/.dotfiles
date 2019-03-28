@@ -39,9 +39,9 @@ let g:indentLine_char                     = '¦'
 " set t_Co=256
 
 " for vim 8
- if (has("termguicolors"))
+if (has("termguicolors"))
    set termguicolors
- endif
+endif
 
 " ------ themes config ------
 colorscheme onehalfdark
@@ -60,8 +60,8 @@ vnoremap > >gv
 " nmap q :BuffergatorMruCyclePrev<cr>
 " nmap w :BuffergatorMruCycleNext<cr>
 " nmap <leader>bl :BuffergatorOpen<cr>
-map <C-h> :bn<cr>
-map <C-l> :bp<cr>
+map q :bp<cr>
+map w :bn<cr>
 
 " FZF
 nnoremap <silent> <C-f> :Ag<CR>
