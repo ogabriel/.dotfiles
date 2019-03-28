@@ -1,3 +1,5 @@
+let mapleader = "\<Space>"
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -7,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 
 " text editing
 Plug 'tpope/vim-surround'                               " better brackets
-Plug 'tpope/vim-commentary'                             " comments
+Plug 'tpope/vim-commentary'                             " comments # use gc to comment lines and selected text
 Plug 'tpope/vim-repeat'                                 " repeat more commands with '.'
 Plug 'tpope/vim-sleuth'
 " Plug 'terryma/vim-multiple-cursors'                     " multiple cursors like in ST
@@ -43,7 +45,7 @@ Plug 'airblade/vim-gitgutter'                           " git gutter
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }             " ruby
 Plug 'tpope/vim-endwise', { 'for': 'ruby', 'on': [] }   " auto end
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }          " run rspec
-Plug 'tpope/vim-bundler', { 'for': 'ruby' }             " bundle commands and smart ctags
+" Plug 'tpope/vim-bundler', { 'for': 'ruby' }             " bundle commands and smart ctags
 
 " elixir
 Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'eelixir'] }
@@ -78,21 +80,24 @@ command! -bar -nargs=1 -complete=file CD execute ":cd " . fnamemodify(<q-args>, 
 nnoremap <C-[><C-[> [<C-d>
 
 " vim-rspec
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-" map <Leader>a :call RunAllSpecs()<CR>
+map <leader>t :call RunCurrentSpecFile()<CR>
+map <leader>s :call RunNearestSpec()<CR>
+map <leader>l :call RunLastSpec()<CR>
+" map <leader>a :call RunAllSpecs()<CR>
 
 " git gutter
-nmap <Leader>j <Plug>GitGutterNextHunk
-nmap <Leader>k <Plug>GitGutterPrevHunk
-nmap <Leader>u <Plug>GitGutterUndoHunk
-nmap <Leader>a <Plug>GitGutterStageHunk
-nmap <Leader>d <Plug>GitGutterPreviewHunk
+nmap <leader>j <Plug>GitGutterNextHunk
+nmap <leader>k <Plug>GitGutterPrevHunk
+nmap <leader>u <Plug>GitGutterUndoHunk
+nmap <leader>a <Plug>GitGutterStageHunk
+nmap <leader>d <Plug>GitGutterPreviewHunk
 
 " undo history
-nmap <Leader>h :UndotreeToggle<CR>
+nmap <leader>h :UndotreeToggle<CR>
 let g:undotree_SetFocusWhenToggle = 1
+
+" ident lines
+
 
 " alternate files
 function! AltCommand(path, vim_command)
@@ -103,7 +108,7 @@ else
   exec a:vim_command . " " . l:alternate
 endif
 endfunction
-nnoremap <Leader>o :call AltCommand(expand('%'), ':e')<CR>
+nnoremap <leader>o :call AltCommand(expand('%'), ':e')<CR>
 
 " Plug load some plugins not while starting vim
 augroup lazy_load
@@ -121,6 +126,7 @@ augroup END
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd ctermbg=234
 hi IndentGuidesEven ctermbg=235
 

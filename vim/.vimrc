@@ -39,13 +39,20 @@ let g:indentLine_char                     = '¦'
 " set t_Co=256
 
 " for vim 8
-if (has("termguicolors"))
-   set termguicolors
-endif
+"if (has("termguicolors"))
+ ""  set termguicolors
+"endif
+
+" ------ fix cursor ------
+set cursorline!
+set synmaxcol=128
+syntax sync minlines=256
 
 " ------ themes config ------
 colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=lightgrey ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=lightgrey ctermbg=235
 
 " ------ mappings ------
 
