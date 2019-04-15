@@ -21,6 +21,7 @@ if has('mouse_sgr')
 endif
 set wildmode=longest,list,full
 set noshowcmd noruler
+set nomousehide
 
 " ------ extra config ------
 let g:airline#extensions#tabline#enabled  = 1
@@ -44,7 +45,7 @@ let g:indentLine_char                     = '¦'
 "endif
 
 " ------ fix cursor ------
-set cursorline!
+" set cursorline!
 set synmaxcol=128
 syntax sync minlines=256
 
