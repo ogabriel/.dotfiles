@@ -23,6 +23,7 @@ Plug 'Shougo/neosnippet', { 'on': [] }                  " snippets
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
 
 " navigation
 Plug 'scrooloose/nerdtree'                              " file tree
