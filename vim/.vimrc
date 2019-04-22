@@ -15,7 +15,7 @@ set splitbelow splitright
 set clipboard=unnamedplus
 set visualbell
 set mouse=a
-set lazyredraw
+" set lazyredraw
 if has('mouse_sgr')
     set ttymouse=sgr
 endif
