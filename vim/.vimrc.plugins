@@ -34,6 +34,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'                                   " move lines around
 Plug 'qpkorr/vim-bufkill'                               " close buffers without breaking splits
 Plug 'junegunn/vim-slash'
+Plug 'mhinz/vim-startify'                               " creates a start screen for vim
 
 " files
 Plug 'tpope/vim-eunuch'                                 " helpers for UNIX shell commands (mkdir, rename, etc.)
