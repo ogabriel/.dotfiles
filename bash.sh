@@ -1,3 +1,6 @@
+#!/bin/sh
+# adding configs to bash
+
 cd
 
 # remove these manualy
