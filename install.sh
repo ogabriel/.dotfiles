@@ -1,3 +1,4 @@
+#!/bin/bash
 # read this file carefuly, then, run the command:
 # chmod +x install.sh, same for the uninstall.sh
 cd

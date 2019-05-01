@@ -1,3 +1,5 @@
+#!/bin/sh
+
 cd
 
 # erase the source versions
