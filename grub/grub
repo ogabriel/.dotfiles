@@ -1,0 +1,4 @@
+GRUB_BACKGROUND="/home/gabriel/wallpapers/greeter.png“
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=-1
+GRUB_GFXMODE=1600x900
