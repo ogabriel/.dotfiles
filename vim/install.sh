@@ -2,6 +2,8 @@
 # read this file carefuly, then, run the command:
 cd
 
+echo "add new configuration to vim"
+
 # creating the backup folder for the original ones
 mkdir .dotfiles_backup
 mv .vimrc .dotfiles_backup
