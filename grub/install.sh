@@ -2,6 +2,6 @@ echo "record grub configs in the file"
 
 cd
 
-echo `~/.dotfiles/grub` >> /etc/default/grub
+sudo mv .dotfiles/grub/grub /etc/default/grub
 
-update-grub
+sudo update-grub
