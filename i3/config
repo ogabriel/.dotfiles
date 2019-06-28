@@ -40,16 +40,17 @@ bindsym Ctrl+Mod1+l exec "dm-tool lock"
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal st"
+# bindsym $mod+d exec "rofi -combi-modi window,drun,run -show drun -sidebar-mode -terminal st"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+Ctrl+h focus left
+bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
-bindsym $mod+Ctrl+l focus right
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -58,16 +59,16 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Ctrl+h move left
+bindsym $mod+Ctrl+j move down
+bindsym $mod+Ctrl+k move up
+bindsym $mod+Ctrl+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Ctrl+Left move left
+bindsym $mod+Ctrl+Down move down
+bindsym $mod+Ctrl+Up move up
+bindsym $mod+Ctrl+Right move right
 
 # split in horizontal orientation
 bindsym $mod+g split h
@@ -120,8 +121,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # switch workspaces
-bindsym $mod+h workspace prev
-bindsym $mod+l workspace next
+bindsym $mod+Shift+h workspace prev
+bindsym $mod+Shift+l workspace next
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -162,14 +163,20 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 for_window [class=".*"] border pixel 0
 
-gaps inner 15
-gaps outer 5
+gaps inner 8
+gaps outer 4
 
-exec --no-startup-id compton -b
+exec_always --no-startup-id compton -b
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id xrandr --output VGA-1 --auto --above LVDS-1
-exec --no-startup-id set -o vi
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id wal -R
+
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute # Decrease volume
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute # Increase volume
+bindsym XF86AudioMute exec amixer set Master toggle # Mute / Unmute
+bindsym XF86Launch1 exec --no-startup-id chromium
+

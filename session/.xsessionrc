@@ -1,0 +1,7 @@
+/home/gabriel/.asdf/shims/wal -R
+
+setxkbmap -option "ctrl:swapcaps"
+
+export EDITOR="vim"
+export TERMINAL="st"
+export BROWSER="chromium"
