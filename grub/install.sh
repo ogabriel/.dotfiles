@@ -5,3 +5,4 @@ cd
 sudo mv .dotfiles/grub/grub /etc/default/grub
 
 sudo update-grub
+sudo update-grub2

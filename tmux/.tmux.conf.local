@@ -17,6 +17,7 @@
 
 # -- windows & pane creation ---------------------------------------------------
 
+set-option -g default-command "exec /bin/bash"
 # new window retains current path, possible values are:
 #   - true
 #   - false (default)
