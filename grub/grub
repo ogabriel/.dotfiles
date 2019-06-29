@@ -3,15 +3,13 @@
 # For full documentation of the options in this file, see:
 #   info -f grub -n 'Simple configuration'
 
-GRUB_BACKGROUND="/home/gabriel/wallpapers/grub.jpg"
 GRUB_DEFAULT=0
-
-GRUB_TIMEOUT=0
-GRUB_TIMEOUT_STYLE=hidden
-
-GRUB_DISABLE_OS_PROBER=true
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=10
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_osi="
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
 
 # Uncomment to enable BadRAM filtering, modify to suit your needs
 # This works with Linux (no patch required) and with any kernel that obtains
