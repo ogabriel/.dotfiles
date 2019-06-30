@@ -29,7 +29,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -173,10 +173,15 @@ exec_always --no-startup-id compton -b
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id xrandr --output VGA-1 --auto --above LVDS-1
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id wal -R
 
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute # Decrease volume
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute # Increase volume
-bindsym XF86AudioMute exec amixer set Master toggle # Mute / Unmute
-bindsym XF86Launch1 exec --no-startup-id chromium
+# bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute # Decrease volume
+# bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute # Increase volume
+# bindsym XF86AudioMute exec amixer set Master toggle # Mute / Unmute
+# bindsym XF86Launch1 exec --no-startup-id chromium
+
+bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 0 -4% # Decrease volume
+bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 0 +4% # Increase volume
+bindsym XF86AudioMute exec pactl -- set-sink-mute 0 'toggle' # Mute / Unmute
+bindsym XF86Launch1 exec --no-startup-id chromium-browser
+
 
