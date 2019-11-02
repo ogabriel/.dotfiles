@@ -37,9 +37,14 @@ bindsym $mod+Shift+q kill
 # lock scree
 bindsym Ctrl+Mod1+l exec "dm-tool lock"
 
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal st"
+set_from_resource $rofiTheme rofi.theme "purple"
+
+bindsym $mod+space exec rofi -show drun -theme $rofiTheme
+bindsym $mod+Shift+space exec rofi -show run -theme $rofiTheme
+bindsym $mod+Ctrl+space exec rofi -show window -theme $rofiTheme
+# bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal st"
+# bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal st"
+# bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -terminal st"
 # bindsym $mod+d exec "rofi -combi-modi window,drun,run -show drun -sidebar-mode -terminal st"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -123,6 +128,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 # switch workspaces
 bindsym $mod+Shift+h workspace prev
 bindsym $mod+Shift+l workspace next
+bindsym $mod+Shift+j move workspace to output up
+bindsym $mod+Shift+k move workspace to output down
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
