@@ -54,12 +54,16 @@ Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }          " run rspec
 Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'eelixir'] }
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
+" rust
+Plug 'rust-lang/rust.vim'
+
 " syntaxes and languages
 Plug 'shime/vim-livedown', { 'for': 'markdown' }        " real time markdown editing
 
 " theme
 Plug 'vim-airline/vim-airline'                          " status line
 Plug 'vim-airline/vim-airline-themes'
+
 " Plug 'mhartington/oceanic-next'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 " repl
@@ -100,7 +104,6 @@ nmap <leader>h :UndotreeToggle<CR>
 let g:undotree_SetFocusWhenToggle = 1
 
 " ident lines
-
 
 " alternate files
 function! AltCommand(path, vim_command)
@@ -163,7 +166,7 @@ let g:mta_filetypes = {'html' : 1, 'javascript.jsx': 1}
 let g:ale_lint_on_enter = 0
 
 " elixir
-let g:mix_format_on_save = 1
+" let g:mix_format_on_save =
 
 " neosnippet
 let g:neosnippet#enable_snipmate_compatibility = 1
@@ -178,3 +181,7 @@ let g:neosnippet#disable_runtime_snippets = {
 " THEME CONFIGS
  syntax enable
 
+" livedown
+nmap gm :LivedownToggle<CR>
+let g:livedown_autorun = 0
+let g:livedown_open = 1
