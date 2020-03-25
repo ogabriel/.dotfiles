@@ -1,0 +1,1 @@
+/home/gabriel/.dotfiles/ctags/.ctags.d
