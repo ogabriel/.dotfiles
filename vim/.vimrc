@@ -36,6 +36,8 @@ let g:NERDTreeWinSize                     = 30
 let NERDTreeShowHidden                    = 1
 let g:move_key_modifier                   = 'A'
 let g:indentLine_char                     = '¦'
+syntax on
+filetype plugin indent on
 " for vim 7
 " set t_Co=256
 
@@ -143,3 +145,12 @@ augroup cursorline
     autocmd WinLeave * setlocal nocursorline
 augroup END
 
+" File information
+com! RelativePath let @+=expand("%")
+com! AbsolutePath let @+=expand("%:p")
+com! FileName let @+=expand("%:t")
+com! PathName let @+=expand("%:p:h")
+
+" Json things
+com! FormatJSON :%!jq '.'
+com! MinifyJSON :%!jq -c
