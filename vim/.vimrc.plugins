@@ -24,6 +24,7 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
+Plug 'SirVer/ultisnips'
 
 " navigation
 Plug 'scrooloose/nerdtree'                              " file tree
@@ -56,6 +57,11 @@ Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
 " rust
 Plug 'rust-lang/rust.vim'
+
+" latex
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+let g:livepreview_previewer = 'zathura'
+let g:livepreview_cursorhold_recompile = 0
 
 " syntaxes and languages
 Plug 'shime/vim-livedown', { 'for': 'markdown' }        " real time markdown editing
