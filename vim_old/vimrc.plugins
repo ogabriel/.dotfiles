@@ -25,6 +25,15 @@ Plug 'junegunn/goyo.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " navigation
 Plug 'scrooloose/nerdtree'                              " file tree
@@ -50,6 +59,7 @@ Plug 'tpope/vim-endwise', { 'for': 'ruby', 'on': [] }   " auto end
 Plug 'tpope/vim-rails', { 'for': 'ruby', 'on': [] }   " auto end
 Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }          " run rspec
 " Plug 'tpope/vim-bundler', { 'for': 'ruby' }             " bundle commands and smart ctags
+Plug 'kremso/vim-spectator', { 'for': 'ruby' }
 
 " elixir
 Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'eelixir'] }
@@ -69,7 +79,6 @@ Plug 'shime/vim-livedown', { 'for': 'markdown' }        " real time markdown edi
 " theme
 Plug 'vim-airline/vim-airline'                          " status line
 Plug 'vim-airline/vim-airline-themes'
-
 " Plug 'mhartington/oceanic-next'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 " repl
@@ -158,10 +167,6 @@ let g:neocomplete#min_pattern_length = 2
 " let g:multi_cursor_start_key='<C-n>'
 " let g:multi_cursor_start_word_key='g<C-n>'
 
-" rspec command
-let g:rspec_runner = "os_x_iterm2"
-let g:rspec_command = "below new | term spring --version > /dev/null && spring rspec {spec} || bundle exec rspec {spec}"
-
 " MatchTagAlways
 let g:mta_use_matchparen_group = 0
 let g:mta_set_default_matchtag_color = 0
@@ -191,3 +196,11 @@ let g:neosnippet#disable_runtime_snippets = {
 nmap gm :LivedownToggle<CR>
 let g:livedown_autorun = 0
 let g:livedown_open = 1
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
