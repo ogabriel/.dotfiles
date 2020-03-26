@@ -35,8 +35,8 @@ Plug 'mhinz/vim-startify'                               " creates a start screen
 Plug 'tpope/vim-eunuch'                                 " helpers for UNIX shell commands (mkdir, rename, etc.)
 
 " git
-Plug 'tpope/vim-fugitive'                               " git commands
-Plug 'airblade/vim-gitgutter'                           " git gutter
+Plug 'tpope/vim-fugitive'                               " adds possibility to run git commands inside vim
+Plug 'airblade/vim-gitgutter'                           " let u see what files has been modified, and you can navegate then
 
 " for all languagens
 Plug 'vim-syntastic/syntastic'
