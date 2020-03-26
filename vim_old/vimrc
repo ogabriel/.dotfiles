@@ -48,8 +48,8 @@ filetype plugin indent on
 
 " ------ fix cursor ------
 " set cursorline!
-set synmaxcol=128
-syntax sync minlines=256
+set synmaxcol=140
+syntax sync minlines=200
 
 " ------ themes config ------
 colorscheme onehalfdark
