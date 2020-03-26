@@ -1,0 +1,3 @@
+There are some problems after migration:
+[ ] - the parenthesis and others don't close
+[ ] - the thing with tabs does not show color, neither uses the spaces that should
