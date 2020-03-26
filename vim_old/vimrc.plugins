@@ -131,20 +131,6 @@ endif
 endfunction
 nnoremap <leader>o :call AltCommand(expand('%'), ':e')<CR>
 
-" Plug load some plugins not while starting vim
-augroup lazy_load
-autocmd!
-autocmd! InsertEnter * call plug#load('deoplete.nvim', 'delimitMate', 'vim-endwise', 'neosnippet')
-                    \| if exists('g:loaded_deoplete')
-                    \|   call deoplete#enable()
-                    \| endif
-augroup END
-
-augroup custom_types
-autocmd!
-autocmd FileType javascript call plug#load('yajs.vim', 'vim-jsx')
-augroup END
-
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
