@@ -138,6 +138,7 @@ hi IndentGuidesOdd ctermbg=234
 hi IndentGuidesEven ctermbg=235
 
 " autocomplete
+let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 0
 let g:deoplete#enable_smart_case = 0
 let g:deoplete#delimiters = ['/', '.', '::', ':', '#']
