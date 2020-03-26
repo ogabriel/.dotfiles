@@ -52,6 +52,7 @@ Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }          " run rspec
 " map <Leader>l :call RunLastSpec()<CR>
 " map <Leader>a :call RunAllSpecs()<CR>
 " Plug 'tpope/vim-bundler', { 'for': 'ruby' }             " bundle commands and smart ctags
+Plug 'kremso/vim-spectator', { 'for': 'ruby' }
 
 " elixir
 Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'eelixir'] }
