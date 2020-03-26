@@ -72,7 +72,7 @@ map w :bn<cr>
 
 " FZF
 nnoremap <silent> <C-f> :Ag<CR>
-nnoremap <silent> <C-p> :FZF<CR>
+nnoremap <silent> <C-p> :Files<CR>
 
 " better search
 noremap <plug>(slash-after) zz
@@ -83,10 +83,6 @@ map <C-n>       :NERDTreeToggle<cr>
 
 " go to line
 :nnoremap <CR> G
-
-" cgn
-nnoremap <Leader>x *``cgn
-nnoremap <Leader>X #``cgN
 
 " goyo reading mode
 map <C-b> :Goyo<CR>
