@@ -14,6 +14,9 @@ mkdir ~/opensource
 cd ~/opensource
 git clone git@github.com:universal-ctags/ctags.git
 
+# install this for deoplete
+pip3 install --user pynvim
+
 cd ~/opensource/ctags
 ./autogen.sh
 ./configure
