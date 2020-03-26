@@ -39,6 +39,12 @@ vnoremap > >gv
 map q :bp<cr>
 map w :bn<cr>
 
+" NERDTree
+let g:NERDTreeWinSize                     = 30
+let NERDTreeShowHidden                    = 1
+map <leader><leader> :NERDTreeToggle<CR>
+map <leader>c :NERDTreeFind<CR>
+
 " Synastics
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
