@@ -15,7 +15,7 @@ endif
 Plug 'Raimondi/delimitMate', { 'on': [] }               " automatic closing of quotes, parenthesis, brackets, etc
 Plug 'terryma/vim-expand-region'                        " change visual selection by using '+' / '-'
 Plug 'nathanaelkane/vim-indent-guides'                  " indent columns
-Plug 'w0rp/ale'                                         " linter, spots errors in all kinds of lines of the code
+Plug 'dense-analysis/ale'                               " linter, spots errors in all kinds of lines of the code
 Plug 'junegunn/goyo.vim'                                " puts the current file in the center of screen
 Plug 'jeetsukumaran/vim-buffergator'                    " allow you to visualize all your open files
 Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
@@ -28,7 +28,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy search
 Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'                                   " move lines around
 Plug 'qpkorr/vim-bufkill'                               " close buffers without breaking splits
-Plug 'junegunn/vim-slash'
+Plug 'junegunn/vim-slash'                               " clears search highlight when cursor is moved
 Plug 'mhinz/vim-startify'                               " creates a start screen for vim
 
 " files
