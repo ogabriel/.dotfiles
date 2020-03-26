@@ -51,8 +51,8 @@ syntax sync minlines=200
 " ------ themes config ------
 colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#2c313a ctermbg=234
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#21252b ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#21252b ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2c313a ctermbg=235
 
 " ------ mappings ------
 
