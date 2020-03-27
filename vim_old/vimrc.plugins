@@ -164,20 +164,10 @@ let g:mta_filetypes = {'html' : 1, 'javascript.jsx': 1}
 let g:ale_lint_on_enter = 0
 
 " elixir
-" let g:mix_format_on_save =
-
-" neosnippet
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory='~/.vim-snippets'
-" w/o neosnippet-snippets plugin
-let g:neosnippet#disable_runtime_snippets = {
-\   '_' : 1,
-\ }
-" expand snippet on TAB or switch to the next suggestion with deoplete
-" imap <expr><TAB> neosnippet#expandable_or_jumpable() ? #"\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? #"\<C-n>" : #"\<TAB>"
+let g:mix_format_on_save = 1
 
 " THEME CONFIGS
- syntax enable
+syntax enable
 
 " livedown
 nmap gm :LivedownToggle<CR>

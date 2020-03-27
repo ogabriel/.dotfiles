@@ -66,7 +66,8 @@ vnoremap > >gv
 " buffergator
 " nmap q :BuffergatorMruCyclePrev<cr>
 " nmap w :BuffergatorMruCycleNext<cr>
-" nmap <leader>bl :BuffergatorOpen<cr>
+nmap <leader>b :BuffergatorOpen<cr>
+
 map q :bp<cr>
 map w :bn<cr>
 
@@ -140,3 +141,6 @@ com! PathName let @+=expand("%:p:h")
 " Json things
 com! FormatJSON :%!jq '.'
 com! MinifyJSON :%!jq -c
+
+" start vim at insert mode when commiting
+au FileType gitcommit 1 | startinsert
