@@ -8,16 +8,19 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " text editing
-Plug 'tpope/vim-surround'                               " configure surrunds around statements
+Plug 'godlygeek/tabular'                              " adjust elements by a certain symbol
 Plug 'tpope/vim-commentary'                             " comments # use gc to comment lines and selected text
-Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'                               " configure surrunds around statements
 Plug 'terryma/vim-multiple-cursors'                     " multiple cursors like in ST
-
-" Plug 'Raimondi/delimitMate'               " closing brackets
-Plug 'jiangmiao/auto-pairs'               " closing bracket
-Plug 'dense-analysis/ale'                               " linter, spots errors in all kinds of lines of the code
 Plug 'junegunn/goyo.vim'                                " puts the current file in the center of screen
 Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
+Plug 'matze/vim-move'                                             " move lines around
+
+" while inserting code
+" Plug 'Raimondi/delimitMate'               " Insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'               " Insert or delete brackets, parens, quotes in pair
+Plug 'tpope/vim-sleuth'                                 " automatically adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
+Plug 'dense-analysis/ale'                               " linter, spots errors in all kinds of lines of the code
 Plug 'SirVer/ultisnips' " Fast snippets
 Plug 'honza/vim-snippets' " Snippets examples
 
@@ -29,18 +32,14 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-" navigation
+" IDE features
 Plug 'scrooloose/nerdtree'                                        " file tree
 Plug 'kopischke/vim-fetch'                                        " open file with line and column number
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy search
 Plug 'junegunn/fzf.vim'
-Plug 'matze/vim-move'                                             " move lines around
 Plug 'qpkorr/vim-bufkill'                                         " close buffers without breaking splits
-Plug 'junegunn/vim-slash'
 Plug 'mhinz/vim-startify'                                         " creates a start screen for vim
-
-" don't know
-Plug 'godlygeek/tabular'                              " adjust elements by a certain symbol
+Plug 'junegunn/vim-slash'                               " clears search highlight when cursor is moved
 
 " multiple languages helpers
 Plug 'janko/vim-test'     " Run tests in many differente languages
