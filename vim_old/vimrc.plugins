@@ -18,7 +18,6 @@ Plug 'terryma/vim-expand-region'                        " change visual selectio
 Plug 'nathanaelkane/vim-indent-guides'                  " indent columns
 Plug 'dense-analysis/ale'                               " linter, spots errors in all kinds of lines of the code
 Plug 'junegunn/goyo.vim'
-Plug 'jeetsukumaran/vim-buffergator'
 Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'

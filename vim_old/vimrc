@@ -63,17 +63,13 @@ map <C-x> :BD<cr>
 vnoremap < <gv
 vnoremap > >gv
 
-" buffergator
-" nmap q :BuffergatorMruCyclePrev<cr>
-" nmap w :BuffergatorMruCycleNext<cr>
-nmap <leader>b :BuffergatorOpen<cr>
-
 map q :bp<cr>
 map w :bn<cr>
 
-" FZF
+" fzf.vim
 nnoremap <silent> <C-f> :Ag<CR>
 nnoremap <silent> <C-p> :Files<CR>
+nmap <leader>b :Buffers<cr>
 
 " better search
 noremap <plug>(slash-after) zz
@@ -88,7 +84,7 @@ let NERDTreeShowHidden                    = 1
 " goyo reading mode
 map <C-b> :Goyo<CR>
 let g:goyo_width=100
-let g:goyo_height=95
+let g:goyo_height=100
 
 " this is god work (ctrl c and v)
 " instructions: install gvim and to that:
