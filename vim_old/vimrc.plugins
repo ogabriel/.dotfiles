@@ -13,8 +13,8 @@ Plug 'tpope/vim-commentary'                             " comments # use gc to c
 Plug 'tpope/vim-sleuth'
 Plug 'terryma/vim-multiple-cursors'                     " multiple cursors like in ST
 
-Plug 'Raimondi/delimitMate', { 'on': [] }               " closing brackets
-Plug 'terryma/vim-expand-region'                        " change visual selection by using '+' / '-'
+" Plug 'Raimondi/delimitMate'               " closing brackets
+Plug 'jiangmiao/auto-pairs'               " closing bracket
 Plug 'dense-analysis/ale'                               " linter, spots errors in all kinds of lines of the code
 Plug 'junegunn/goyo.vim'                                " puts the current file in the center of screen
 Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
@@ -32,7 +32,6 @@ endif
 " navigation
 Plug 'scrooloose/nerdtree'                                        " file tree
 Plug 'kopischke/vim-fetch'                                        " open file with line and column number
-Plug 'yegappan/mru'                                               " most recently used files
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy search
 Plug 'junegunn/fzf.vim'
 Plug 'matze/vim-move'                                             " move lines around
