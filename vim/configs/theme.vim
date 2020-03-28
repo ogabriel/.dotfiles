@@ -15,5 +15,6 @@ if exists('+termguicolors')
 endif
 
 " Those bars that appear when there are tabs
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=white ctermbg=234
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=lightgrey ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#21252b ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2c313a ctermbg=235
+
