@@ -63,6 +63,7 @@ map <C-x> :BD<cr>
 vnoremap < <gv
 vnoremap > >gv
 
+" navegate foward and backwards
 map q :bp<cr>
 map w :bn<cr>
 
