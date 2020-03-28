@@ -10,17 +10,13 @@ call plug#begin('~/.vim/plugged')
 " text editing
 Plug 'tpope/vim-surround'                               " better brackets
 Plug 'tpope/vim-commentary'                             " comments # use gc to comment lines and selected text
-Plug 'tpope/vim-repeat'                                 " repeat more commands with '.'
 Plug 'tpope/vim-sleuth'
-" Plug 'terryma/vim-multiple-cursors'                     " multiple cursors like in ST
-Plug 'Shougo/deoplete.nvim', { 'on': [], 'do': ':UpdateRemotePlugins', 'tag': 'e28d519' } " autocomplete, use e28d519 because of https://github.com/Shougo/deoplete.nvim/issues/291
+Plug 'terryma/vim-multiple-cursors'                     " multiple cursors like in ST
+
 Plug 'Raimondi/delimitMate', { 'on': [] }               " closing brackets
 Plug 'terryma/vim-expand-region'                        " change visual selection by using '+' / '-'
-Plug 'mbbill/undotree'                                  " undo history tree
 Plug 'nathanaelkane/vim-indent-guides'                  " indent columns
-Plug 'w0rp/ale'                                         " lint
-Plug 'Shougo/neosnippet', { 'on': [] }                  " snippets
-Plug 'kien/rainbow_parentheses.vim'
+Plug 'dense-analysis/ale'                               " linter, spots errors in all kinds of lines of the code
 Plug 'junegunn/goyo.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
@@ -36,15 +32,23 @@ else
 endif
 
 " navigation
-Plug 'scrooloose/nerdtree'                              " file tree
-Plug 'kopischke/vim-fetch'                              " open file with line and column number
-Plug 'yegappan/mru'                                     " most recently used files
+Plug 'scrooloose/nerdtree'                                        " file tree
+Plug 'kopischke/vim-fetch'                                        " open file with line and column number
+Plug 'yegappan/mru'                                               " most recently used files
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy search
 Plug 'junegunn/fzf.vim'
-Plug 'matze/vim-move'                                   " move lines around
-Plug 'qpkorr/vim-bufkill'                               " close buffers without breaking splits
+Plug 'matze/vim-move'                                             " move lines around
+Plug 'qpkorr/vim-bufkill'                                         " close buffers without breaking splits
 Plug 'junegunn/vim-slash'
-Plug 'mhinz/vim-startify'                               " creates a start screen for vim
+Plug 'mhinz/vim-startify'                                         " creates a start screen for vim
+
+" don't know
+Plug 'godlygeek/tabular'                              " adjust elements by a certain symbol
+
+" multiple languages helpers
+Plug 'janko/vim-test'     " Run tests in many differente languages
+Plug 'tpope/vim-dispatch' " Dipach long running applications to other windows
+Plug 'tpope/vim-endwise'  " insert end after a start of a block
 
 " files
 Plug 'tpope/vim-eunuch'                                 " helpers for UNIX shell commands (mkdir, rename, etc.)
@@ -55,34 +59,35 @@ Plug 'airblade/vim-gitgutter'                           " git gutter
 
 " ruby / rails
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }             " ruby
-Plug 'tpope/vim-endwise', { 'for': 'ruby', 'on': [] }   " auto end
 Plug 'tpope/vim-rails', { 'for': 'ruby', 'on': [] }   " auto end
-Plug 'thoughtbot/vim-rspec', { 'for': 'ruby' }          " run rspec
-" Plug 'tpope/vim-bundler', { 'for': 'ruby' }             " bundle commands and smart ctags
+Plug 'tpope/vim-bundler', { 'for': 'ruby' }             " bundle commands and smart ctags
 Plug 'kremso/vim-spectator', { 'for': 'ruby' }
 
 " elixir
-Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'eelixir'] }
-Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
+Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] } " add elixir lang
+Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'eelixir'] }   " mix format
+Plug 'mattreduce/vim-mix', { 'for': ['elixir', 'eelixir'] }     " add calls to mix
 
 " rust
-Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim', { 'for': ['rs', 'rlib'] }
 
-" latex
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-let g:livepreview_previewer = 'zathura'
-let g:livepreview_cursorhold_recompile = 0
+" LaTeX
+Plug 'lervag/vimtex', { 'for': ['tex', 'bib'] }
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_quickfix_mode = 0
+" \ll starts compiler \lv show file
 
-" syntaxes and languages
-Plug 'shime/vim-livedown', { 'for': 'markdown' }        " real time markdown editing
+" MarkDown
+Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }        " real time markdown editing
+let g:markdown_include_jekyll_support = 1
+
+" JS
+Plug 'pangloss/vim-javascript', { 'for': 'js' }        " real time markdown editing
 
 " theme
 Plug 'vim-airline/vim-airline'                          " status line
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'mhartington/oceanic-next'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-" repl
-Plug 'metakirby5/codi.vim'
 
 call plug#end()
 
