@@ -14,14 +14,14 @@ mkdir ~/opensource
 cd ~/opensource
 git clone git@github.com:universal-ctags/ctags.git
 
-# install this for deoplete
-pip3 install --user pynvim
-
 cd ~/opensource/ctags
 ./autogen.sh
 ./configure
 sudo make
 sudo make install
+
+# install this for deoplete
+pip3 install --user pynvim
 
 # link files
 ln -sf ~/.dotfiles/vim/vimrc ~/.vimrc
