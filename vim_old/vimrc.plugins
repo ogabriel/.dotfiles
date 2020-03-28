@@ -15,7 +15,6 @@ Plug 'terryma/vim-multiple-cursors'                     " multiple cursors like 
 
 Plug 'Raimondi/delimitMate', { 'on': [] }               " closing brackets
 Plug 'terryma/vim-expand-region'                        " change visual selection by using '+' / '-'
-Plug 'nathanaelkane/vim-indent-guides'                  " indent columns
 Plug 'dense-analysis/ale'                               " linter, spots errors in all kinds of lines of the code
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
@@ -83,10 +82,11 @@ let g:markdown_include_jekyll_support = 1
 " JS
 Plug 'pangloss/vim-javascript', { 'for': 'js' }        " real time markdown editing
 
-" theme
-Plug 'vim-airline/vim-airline'                          " status line
-Plug 'vim-airline/vim-airline-themes'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
+" Theme
+Plug 'vim-airline/vim-airline'                          " status bar
+Plug 'vim-airline/vim-airline-themes'                   " status themes
+Plug 'nathanaelkane/vim-indent-guides'                  " color indented columns
+Plug 'sonph/onehalf', {'rtp': 'vim/'}                   " my current theme
 
 call plug#end()
 
