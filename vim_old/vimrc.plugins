@@ -8,7 +8,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " text editing
-Plug 'tpope/vim-surround'                               " better brackets
+Plug 'tpope/vim-surround'                               " configure surrunds around statements
 Plug 'tpope/vim-commentary'                             " comments # use gc to comment lines and selected text
 Plug 'tpope/vim-sleuth'
 Plug 'terryma/vim-multiple-cursors'                     " multiple cursors like in ST
@@ -16,10 +16,10 @@ Plug 'terryma/vim-multiple-cursors'                     " multiple cursors like 
 Plug 'Raimondi/delimitMate', { 'on': [] }               " closing brackets
 Plug 'terryma/vim-expand-region'                        " change visual selection by using '+' / '-'
 Plug 'dense-analysis/ale'                               " linter, spots errors in all kinds of lines of the code
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'                                " puts the current file in the center of screen
 Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' " Fast snippets
+Plug 'honza/vim-snippets' " Snippets examples
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -48,7 +48,7 @@ Plug 'janko/vim-test'     " Run tests in many differente languages
 Plug 'tpope/vim-dispatch' " Dipach long running applications to other windows
 Plug 'tpope/vim-endwise'  " insert end after a start of a block
 
-" files
+" Vim commands for linux native
 Plug 'tpope/vim-eunuch'                                 " helpers for UNIX shell commands (mkdir, rename, etc.)
 
 " git
