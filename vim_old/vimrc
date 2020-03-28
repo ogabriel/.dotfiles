@@ -24,16 +24,9 @@ set noshowcmd noruler
 set nomousehide
 
 " ------ extra config ------
-let g:airline#extensions#tabline#enabled  = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_section_y = '%{strftime("%H:%M")}'
-let g:airline_section_warning             = ''
-let g:airline_detect_crypt                = 0
 let g:buffergator_suppress_keymaps        = 1
 let g:buffergator_mru_cycle_loop          = 1
 let g:buffergator_viewport_split_policy   = 'R'
-let g:NERDTreeWinSize                     = 30
-let NERDTreeShowHidden                    = 1
 let g:move_key_modifier                   = 'A'
 let g:indentLine_char                     = '¦'
 syntax on
@@ -53,6 +46,13 @@ colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#21252b ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2c313a ctermbg=235
+
+" ------ bar config -------
+let g:airline#extensions#tabline#enabled  = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_section_y = '%{strftime("%H:%M")}'
+let g:airline_section_warning             = ''
+let g:airline_detect_crypt                = 0
 
 " ------ mappings ------
 
@@ -79,8 +79,8 @@ nnoremap <silent> <C-p> :Files<CR>
 noremap <plug>(slash-after) zz
 
 " nerdtree
-" nmap <C-n> :NERDTreeFocus<cr>n<c-w><c-p>
-map <C-n>       :NERDTreeToggle<cr>
+let g:NERDTreeWinSize                     = 30
+let NERDTreeShowHidden                    = 1
 
 " go to line
 :nnoremap <CR> G
@@ -141,6 +141,9 @@ com! PathName let @+=expand("%:p:h")
 " Json things
 com! FormatJSON :%!jq '.'
 com! MinifyJSON :%!jq -c
+
+" Command to reload vim
+com! RVimRc :source ~/.vimrc
 
 " start vim at insert mode when commiting
 au FileType gitcommit 1 | startinsert
