@@ -106,12 +106,6 @@ command! -bar -nargs=1 -complete=file CD execute ":cd " . fnamemodify(<q-args>, 
 " jump to defenition with fireplace
 nnoremap <C-[><C-[> [<C-d>
 
-" vim-rspec
-map <leader>t :call RunCurrentSpecFile()<CR>
-map <leader>s :call RunNearestSpec()<CR>
-map <leader>l :call RunLastSpec()<CR>
-" map <leader>a :call RunAllSpecs()<CR>
-
 " git gutter
 nmap <leader>j <Plug>GitGutterNextHunk
 nmap <leader>k <Plug>GitGutterPrevHunk
@@ -186,3 +180,26 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" vim-test
+let g:test#preserve_screen = 1
+
+if has('nvim')
+  tmap <C-o> <C-\><C-n>
+endif
+
+let test#strategy = {
+  \ 'nearest': 'neovim',
+  \ 'file':    'dispatch',
+  \ 'suite':   'dispatch',
+\}
+
+let test#ruby#rspec#options = {
+  \ 'suite':   '--fail-fast',
+\}
+
+nmap <silent> <leader>n :TestNearest<CR>
+nmap <silent> <leader>f :TestFile<CR>
+nmap <silent> <leader>s :TestSuite<CR>
+nmap <silent> <leader>s :TestLast<CR>
+nmap <silent> <leader>v :TestVisit<CR>
