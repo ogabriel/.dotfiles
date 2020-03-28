@@ -24,9 +24,6 @@ set noshowcmd noruler
 set nomousehide
 
 " ------ extra config ------
-let g:buffergator_suppress_keymaps        = 1
-let g:buffergator_mru_cycle_loop          = 1
-let g:buffergator_viewport_split_policy   = 'R'
 let g:move_key_modifier                   = 'A'
 let g:indentLine_char                     = '¦'
 syntax on
