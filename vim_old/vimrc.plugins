@@ -145,32 +145,15 @@ let g:deoplete#auto_complete_delay = 0
 let g:deoplete#auto_refresh_delay = 0
 let g:neocomplete#min_pattern_length = 2
 
-" <TAB>: completion
-"inoremap <expr><TAB>  pumvisible() ? #"\<C-n>" : #"\<TAB>"
-
 " multiple cursors
 " let g:multi_cursor_start_key='<C-n>'
 " let g:multi_cursor_start_word_key='g<C-n>'
-
-" MatchTagAlways
-let g:mta_use_matchparen_group = 0
-let g:mta_set_default_matchtag_color = 0
-highlight MatchTag ctermbg=240 guifg=#585858
-let g:mta_filetypes = {'html' : 1, 'javascript.jsx': 1}
 
 " don't run linters on opening a file
 let g:ale_lint_on_enter = 0
 
 " elixir
 let g:mix_format_on_save = 1
-
-" THEME CONFIGS
-syntax enable
-
-" livedown
-nmap gm :LivedownToggle<CR>
-let g:livedown_autorun = 0
-let g:livedown_open = 1
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
