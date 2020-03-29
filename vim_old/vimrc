@@ -52,8 +52,8 @@ map <silent> <A-h> :split<CR>
 
 " ctrl + s to save files
 noremap <silent> <C-S> :update<CR>
-vnoremap <silent> <C-S>         <C-C>:update<CR>
-inoremap <silent> <C-S>        <esc><C-O>:update<CR>
+vnoremap <silent> <C-S> <C-C>:update<CR>
+inoremap <silent> <C-S> <C-O>:update<CR>
 
 if !has('nvim')
   if exists('$TMUX')
