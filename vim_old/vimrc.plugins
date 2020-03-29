@@ -100,32 +100,12 @@ command! -bar -nargs=1 -complete=file CD execute ":cd " . fnamemodify(<q-args>, 
 \ " | NERDTree " . fnamemodify(<q-args>, ':p:h') . " | NERDTreeToggle" .
 \ " | :silent !title_pwd" | execute ":redraw!"
 
-" jump to defenition with fireplace
-nnoremap <C-[><C-[> [<C-d>
-
 " git gutter
 nmap <leader>j <Plug>GitGutterNextHunk
 nmap <leader>k <Plug>GitGutterPrevHunk
 nmap <leader>u <Plug>GitGutterUndoHunk
 nmap <leader>a <Plug>GitGutterStageHunk
 nmap <leader>d <Plug>GitGutterPreviewHunk
-
-" undo history
-nmap <leader>h :UndotreeToggle<CR>
-let g:undotree_SetFocusWhenToggle = 1
-
-" ident lines
-
-" alternate files
-function! AltCommand(path, vim_command)
-let l:alternate = system("gfind . -name '*.rb' -type f -print0 | alt " . a:path)
-if empty(l:alternate)
-  echo "No alternate file for " . a:path . " exists!"
-else
-  exec a:vim_command . " " . l:alternate
-endif
-endfunction
-nnoremap <leader>o :call AltCommand(expand('%'), ':e')<CR>
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
