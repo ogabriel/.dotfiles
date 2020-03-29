@@ -8,6 +8,17 @@ function! s:SourceConfigFilesIn(directory)
   endfor
 endfunction
 
+function! SourceExists(file)
+  if filereadable(a:file)
+    exe 'source '.a:file
+  endif
+endfunction
+
+for plugin in keys(g:plugs)
+  call SourceExists(plugin.'/config.vim')
+  call SourceExists(plugin.'/config.local.vim')
+endfor
+
 " Install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
