@@ -126,12 +126,13 @@ let g:neocomplete#min_pattern_length = 2
 " let g:multi_cursor_start_key='<C-n>'
 " let g:multi_cursor_start_word_key='g<C-n>'
 
-" don't run linters on opening a file
-let g:ale_lint_on_enter = 0
+" ale
+let g:ale_lint_on_enter = 1
 
 " elixir
 let g:mix_format_on_save = 1
 
+" UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
