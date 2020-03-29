@@ -109,8 +109,8 @@ nmap <leader>d <Plug>GitGutterPreviewHunk
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd ctermbg=234
-hi IndentGuidesEven ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#21252b ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2c313a ctermbg=4
 
 " autocomplete
 let g:deoplete#enable_at_startup = 1
@@ -173,9 +173,6 @@ endif
 
 " Colorscheme
 colorscheme onehalfdark
-let g:indent_guides_enable_on_vim_startup = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#21252b ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2c313a ctermbg=4
 
 " Airline
 let g:airline_theme='onehalfdark'
