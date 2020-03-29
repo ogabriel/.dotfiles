@@ -131,6 +131,26 @@ let g:ale_lint_on_enter = 1
 " elixir
 let g:mix_format_on_save = 1
 
+" vim-move
+let g:move_key_modifier                   = 'A'
+
+" buffkill
+map <C-x> :BD<cr>
+
+" fzf.vim
+nnoremap <silent> <C-f> :Ag<CR>
+nnoremap <silent> <C-p> :Files<CR>
+nmap <leader>b :Buffers<cr>
+
+" vim-slash
+" Places the current match at the center of the window.
+noremap <plug>(slash-after) zz
+
+" goyo
+map <C-b> :Goyo<CR>
+let g:goyo_width=100
+let g:goyo_height=100
+
 " UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
