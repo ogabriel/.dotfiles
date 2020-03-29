@@ -24,8 +24,6 @@ set noshowcmd noruler
 set nomousehide
 
 " ------ extra config ------
-let g:move_key_modifier                   = 'A'
-let g:indentLine_char                     = '¦'
 syntax on
 filetype plugin indent on
 
@@ -33,10 +31,7 @@ filetype plugin indent on
 set synmaxcol=120
 syntax sync minlines=200
 
-" buffkill
-map <C-x> :BD<cr>
-
-" vim move
+" move lines of code vertically
 vnoremap < <gv
 vnoremap > >gv
 
@@ -44,21 +39,8 @@ vnoremap > >gv
 map q :bp<cr>
 map w :bn<cr>
 
-" fzf.vim
-nnoremap <silent> <C-f> :Ag<CR>
-nnoremap <silent> <C-p> :Files<CR>
-nmap <leader>b :Buffers<cr>
-
-" better search
-noremap <plug>(slash-after) zz
-
 " go to line
 :nnoremap <CR> G
-
-" goyo reading mode
-map <C-b> :Goyo<CR>
-let g:goyo_width=100
-let g:goyo_height=100
 
 " Enable Ctrlc and CtrlV for vim (requires gvim)
 vnoremap <C-c> "*y :let @+=@*<CR>
