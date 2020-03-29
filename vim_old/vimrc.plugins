@@ -8,21 +8,21 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " text editing
-Plug 'godlygeek/tabular'                              " adjust elements by a certain symbol
-Plug 'tpope/vim-commentary'                             " comments # use gc to comment lines and selected text
-Plug 'tpope/vim-surround'                               " configure surrunds around statements
-Plug 'terryma/vim-multiple-cursors'                     " multiple cursors like in ST
-Plug 'junegunn/goyo.vim'                                " puts the current file in the center of screen
-Plug 'tpope/vim-unimpaired'                             " it can create new lines with ]
+Plug 'godlygeek/tabular'                                          " adjust elements by a certain symbol
+Plug 'tpope/vim-commentary'                                       " comments # use gc to comment lines and selected text
+Plug 'tpope/vim-surround'                                         " configure surrunds around statements
+Plug 'terryma/vim-multiple-cursors'                               " multiple cursors like in ST
+Plug 'junegunn/goyo.vim'                                          " puts the current file in the center of screen
+Plug 'tpope/vim-unimpaired'                                       " it can create new lines with ]
 Plug 'matze/vim-move'                                             " move lines around
 
 " while inserting code
-" Plug 'Raimondi/delimitMate'               " Insert or delete brackets, parens, quotes in pair
-Plug 'jiangmiao/auto-pairs'               " Insert or delete brackets, parens, quotes in pair
-Plug 'tpope/vim-sleuth'                                 " automatically adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
-Plug 'dense-analysis/ale'                               " linter, spots errors in all kinds of lines of the code
-Plug 'SirVer/ultisnips' " Fast snippets
-Plug 'honza/vim-snippets' " Snippets examples
+" Plug 'Raimondi/delimitMate'                                     " Insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'                                       " Insert or delete brackets, parens, quotes in pair
+Plug 'tpope/vim-sleuth'                                           " automatically adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
+Plug 'dense-analysis/ale'                                         " linter, spots errors in all kinds of lines of the code
+Plug 'SirVer/ultisnips'                                           " Fast snippets
+Plug 'honza/vim-snippets'                                         " Snippets examples
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -39,30 +39,30 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy search
 Plug 'junegunn/fzf.vim'
 Plug 'qpkorr/vim-bufkill'                                         " close buffers without breaking splits
 Plug 'mhinz/vim-startify'                                         " creates a start screen for vim
-Plug 'junegunn/vim-slash'                               " clears search highlight when cursor is moved
+Plug 'junegunn/vim-slash'                                         " clears search highlight when cursor is moved
 
 " multiple languages helpers
-Plug 'janko/vim-test'     " Run tests in many differente languages
-Plug 'tpope/vim-dispatch' " Dipach long running applications to other windows
-Plug 'tpope/vim-endwise'  " insert end after a start of a block
+Plug 'janko/vim-test'                                             " Run tests in many differente languages
+Plug 'tpope/vim-dispatch'                                         " Dipach long running applications to other windows
+Plug 'tpope/vim-endwise'                                          " insert end after a start of a block
 
 " Vim commands for linux native
-Plug 'tpope/vim-eunuch'                                 " helpers for UNIX shell commands (mkdir, rename, etc.)
+Plug 'tpope/vim-eunuch'                                           " helpers for UNIX shell commands (mkdir, rename, etc.)
 
 " git
-Plug 'tpope/vim-fugitive'                               " git commands
-Plug 'airblade/vim-gitgutter'                           " git gutter
+Plug 'tpope/vim-fugitive'                                         " git commands
+Plug 'airblade/vim-gitgutter'                                     " git gutter
 
 " ruby / rails
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }             " ruby
-Plug 'tpope/vim-rails', { 'for': 'ruby', 'on': [] }   " auto end
-Plug 'tpope/vim-bundler', { 'for': 'ruby' }             " bundle commands and smart ctags
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }                       " ruby
+Plug 'tpope/vim-rails', { 'for': 'ruby', 'on': [] }               " auto end
+Plug 'tpope/vim-bundler', { 'for': 'ruby' }                       " bundle commands and smart ctags
 Plug 'kremso/vim-spectator', { 'for': 'ruby' }
 
 " elixir
-Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] } " add elixir lang
-Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'eelixir'] }   " mix format
-Plug 'mattreduce/vim-mix', { 'for': ['elixir', 'eelixir'] }     " add calls to mix
+Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }   " add elixir lang
+Plug 'mhinz/vim-mix-format', { 'for': ['elixir', 'eelixir'] }     " mix format
+Plug 'mattreduce/vim-mix', { 'for': ['elixir', 'eelixir'] }       " add calls to mix
 
 " rust
 Plug 'rust-lang/rust.vim', { 'for': ['rs', 'rlib'] }
@@ -74,17 +74,17 @@ let g:vimtex_quickfix_mode = 0
 " \ll starts compiler \lv show file
 
 " MarkDown
-Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }        " real time markdown editing
+Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }           " real time markdown editing
 let g:markdown_include_jekyll_support = 1
 
 " JS
-Plug 'pangloss/vim-javascript', { 'for': 'js' }        " real time markdown editing
+Plug 'pangloss/vim-javascript', { 'for': 'js' }                   " real time markdown editing
 
 " Theme
-Plug 'vim-airline/vim-airline'                          " status bar
-Plug 'vim-airline/vim-airline-themes'                   " status themes
-Plug 'nathanaelkane/vim-indent-guides'                  " color indented columns
-Plug 'sonph/onehalf', {'rtp': 'vim/'}                   " my current theme
+Plug 'vim-airline/vim-airline'                                    " status bar
+Plug 'vim-airline/vim-airline-themes'                             " status themes
+Plug 'nathanaelkane/vim-indent-guides'                            " color indented columns
+Plug 'sonph/onehalf', {'rtp': 'vim/'}                             " my current theme
 
 call plug#end()
 
