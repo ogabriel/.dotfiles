@@ -98,3 +98,8 @@ com! RVimRc :source ~/.vimrc
 
 " start vim at insert mode when commiting
 au FileType gitcommit 1 | startinsert
+
+" C programming
+com! CRun :./%<
+com! CCompile :!gcc % -o %<
+com! CCompileRun :!gcc % -o %< && ./%<
