@@ -52,10 +52,6 @@ nmap <leader>b :Buffers<cr>
 " better search
 noremap <plug>(slash-after) zz
 
-" nerdtree
-let g:NERDTreeWinSize                     = 30
-let NERDTreeShowHidden                    = 1
-
 " go to line
 :nnoremap <CR> G
 
