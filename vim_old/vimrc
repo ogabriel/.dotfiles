@@ -100,6 +100,18 @@ com! RVimRc :source ~/.vimrc
 au FileType gitcommit 1 | startinsert
 
 " C programming
-com! CRun :./%<
+com! CRun :!./%<
 com! CCompile :!gcc % -o %<
 com! CCompileRun :!gcc % -o %< && ./%<
+
+map <silent> cr :w <CR> :CRun <CR>
+map <silent> ccr :w <CR> :CCompileRun <CR>
+
+" Solve problem when starting startify on neovim (https://www.reddit.com/r/neovim/comments/5far5t/open_most_recently_used_file_on_startup/)
+" autocmd VimEnter * nested
+"       \  if argc() == 0
+"       \|   let last = filter(filter(copy(v:oldfiles), 'match(v:val, getcwd()) == 0'), 'filereadable(v:val)')
+"       \|   if !empty(last)
+"       \|     execute 'edit' fnameescape(last[0])
+"       \|   endif
+"       \| endif
