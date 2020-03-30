@@ -1,10 +1,12 @@
+" Define leader from the start
+let mapleader = "\<Space>"
+
 " ------ load plugins ------
 if filereadable(expand("~/.vimrc.plugins"))
   source ~/.vimrc.plugins
 endif
 
 " ------ sensible defaults ------
-let mapleader = "\<Space>"
 set hlsearch
 set incsearch
 set number
