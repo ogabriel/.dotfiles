@@ -1,5 +1,0 @@
-# General options
---recursive=yes
---tag-relative=yes
---exclude=.git
---exclude=log
