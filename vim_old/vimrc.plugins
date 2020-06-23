@@ -120,6 +120,7 @@ let g:deoplete#max_list = 5
 let g:deoplete#auto_complete_delay = 0
 let g:deoplete#auto_refresh_delay = 0
 let g:neocomplete#min_pattern_length = 2
+call deoplete#custom#option('num_processes', 1)
 
 " multiple cursors
 " let g:multi_cursor_start_key='<C-n>'
@@ -136,6 +137,7 @@ let g:move_key_modifier                   = 'A'
 
 " buffkill
 map <C-x> :BD<cr>
+map <A-x> :bd<cr>
 
 " fzf.vim
 nnoremap <silent> <C-f> :Ag<CR>
@@ -180,7 +182,7 @@ let test#ruby#rspec#options = {
 nmap <silent> <leader>n :TestNearest<CR>
 nmap <silent> <leader>f :TestFile<CR>
 nmap <silent> <leader>s :TestSuite<CR>
-nmap <silent> <leader>s :TestLast<CR>
+nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>v :TestVisit<CR>
 
 " Theme
