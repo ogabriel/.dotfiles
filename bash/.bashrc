@@ -7,11 +7,12 @@ shopt -s autocd # allow cd without cd
 HISTSIZE= HISTFILESIZE= # infinite history
 
 # some aliases
-alias v="nvim ."
-alias sv="sudo nim"
+alias v="vim ."
+alias sv="sudo vim"
 alias nv="nvim"
 alias s="bundle exec rails server"
 alias c="bundle exec rails console"
+alias :q="exit"
 
 # adding color
 alias ls="ls -hN --color=auto --group-directories-first"
@@ -19,6 +20,8 @@ alias grep="grep --color=auto"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 export PS1="💻\[\033[01;32m\]\w\[\033[01;34m\]\$(__git_ps1 '(%s)')\[\033[00m\] \$ "
+
+export PATH=$PATH:$HOME/bin:$HOME/.scripts:$HOME/.hidden_scripts
 
 # tips of linux  apps:
 # - youtube-dll
