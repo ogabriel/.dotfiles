@@ -9,4 +9,3 @@ echo "add new configuration to bashrc"
 echo 'source ~/.dotfiles/bash/.bashrc' >> ~/.bashrc
 
 source ~/.bashrc
-
