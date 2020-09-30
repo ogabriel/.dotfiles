@@ -27,4 +27,3 @@ export PATH=$PATH:$HOME/bin:$HOME/.scripts:$HOME/.hidden_scripts
 # - youtube-dll
 # - youtube-viewer
 # - speedometer
-
