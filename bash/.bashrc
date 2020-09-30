@@ -5,6 +5,14 @@ stty -ixon # disable ctrl+s and ctrl+q
 shopt -s autocd # allow cd without cd
 
 HISTSIZE= HISTFILESIZE= # infinite history
+HISTCONTROL='ignoreboth'   # no duplicate entries
+
+shopt -s histappend # append to history, don't overwrite it
+shopt -s histreedit # reedit it, when failed
+shopt -s histverify # verify it, when failed
+
+# Save and reload the history after each command finishes
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # some aliases
 alias v="vim ."
