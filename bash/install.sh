@@ -3,3 +3,4 @@
 
 cd
 echo 'source ~/.dotfiles/bash/.bashrc' >> ~/.bashrc
+echo 'source ~/.dotfiles/bash/.inputrc' >> ~/.inputrc
