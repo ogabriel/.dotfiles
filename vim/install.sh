@@ -23,9 +23,3 @@ sudo make install
 # install this for deoplete
 sudo apt install python3-pip
 pip3 install --user pynvim
-
-# link files
-ln -sf ~/.dotfiles/vim/vimrc ~/.vimrc
-
-# link folder
-ln -s ~/.dotfiles/vim ~/.vim
