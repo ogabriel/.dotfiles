@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mkdir ~/.config
-mkdir ~/.config/nvim
+mkdir -p ~/.config
+mkdir -p ~/.config/nvim
 touch ~/.config/nvim/init.vim
 
 echo "set runtimepath^=~/.vim runtimepath+=~/.vim/after" >> ~/.config/nvim/init.vim
