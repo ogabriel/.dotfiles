@@ -1,6 +1,8 @@
 #!/bin/bash
-# read this file carefuly, then, run the command:
+
 cd
+
+sudo apt install tmux
 
 # creating the backup folder for the original ones
 mkdir -p .dotfiles_backup
