@@ -5,7 +5,7 @@ stty -ixon # disable ctrl+s and ctrl+q
 shopt -s autocd # allow cd without cd
 
 HISTSIZE= HISTFILESIZE= # infinite history
-HISTCONTROL='ignoreboth'   # no duplicate entries
+HISTCONTROL=ignoreboth   # no duplicate entries
 
 shopt -s histappend # append to history, don't overwrite it
 shopt -s histreedit # reedit it, when failed
