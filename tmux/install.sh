@@ -2,10 +2,8 @@
 # read this file carefuly, then, run the command:
 cd
 
-echo "add new configuration to tmux"
-
 # creating the backup folder for the original ones
-mkdir .dotfiles_backup
+mkdir -p .dotfiles_backup
 mv .tmux.conf .dotfiles_backup
 mv .tmux.conf.local .dotfiles_backup
 
