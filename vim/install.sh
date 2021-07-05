@@ -16,6 +16,9 @@ for choice in $choices
 do
     case $choice in
         1)
+            # search
+            apt-get install silversearcher-ag
+
             # install this for deoplete
             sudo apt install python3-pip
             pip3 install --user pynvim
