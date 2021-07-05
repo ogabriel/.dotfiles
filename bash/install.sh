@@ -3,7 +3,8 @@
 
 cd
 echo 'source ~/.dotfiles/bash/.bashrc' >> ~/.bashrc
-echo 'source ~/.dotfiles/bash/.inputrc' >> ~/.inputrc
 echo 'source ~/.dotfiles/bash/.profile' >> ~/.profile
+# source does not work on .inputrc
+ln -sf ~/.dotfiles/bash/.inputrc ~/.inputrc
 
 source ~/.bashrc
