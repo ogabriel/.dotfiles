@@ -29,7 +29,7 @@ alias grep="grep --color=auto"
 export ERL_AFLAGS="-kernel shell_history enabled"
 export PS1="💻\[\033[01;32m\]\w\[\033[01;34m\]\$(__git_ps1 '(%s)')\[\033[00m\] \$ "
 
-export PATH=$PATH:$HOME/bin:$HOME/.scripts:$HOME/.hidden_scripts
+export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.hidden_scripts
 
 # tips of linux  apps:
 # - youtube-dll
