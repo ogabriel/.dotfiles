@@ -8,6 +8,22 @@
     {
       "pattern": "https?://gather.town/app/*",
       "passKeys": ""
+    },
+    {
+      "pattern": "https?://blog.seethis.link/scan-rate-estimator/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://config.qmk.fm/#/test*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://en.key-test.ru/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://monkeytype.com/*",
+      "passKeys": ""
     }
   ],
   "filterLinkHints": false,
