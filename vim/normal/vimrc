@@ -112,6 +112,9 @@ com! RVimRc :source ~/.vimrc
 " start vim at insert mode when commiting
 au FileType gitcommit 1 | startinsert
 
+" Rust
+autocmd BufNewFile,BufRead *.rs set filetype=rust
+
 " C programming
 com! CRun :!./%<
 com! CCompile :!gcc % -lm -o %<
