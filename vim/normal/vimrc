@@ -111,6 +111,10 @@ com! CCompileRun :!gcc % -o %< && ./%<
 map <silent> cr :w <CR> :CRun <CR>
 map <silent> ccr :w <CR> :CCompileRun <CR>
 
+" git
+com! Gu :Git push
+com! Gp :Git publish
+
 " Solve problem when starting startify on neovim (https://www.reddit.com/r/neovim/comments/5far5t/open_most_recently_used_file_on_startup/)
 " autocmd VimEnter * nested
 "       \  if argc() == 0
