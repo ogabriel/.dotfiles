@@ -1199,7 +1199,7 @@
   # Do some work then synchronize your changes, which integrates your branch:
   #
   #     $ git topic-sync
-  #  
+  #
   # Stop work on a topic branch, which deletes your branch:
   #
   #     $ git topic-stop
