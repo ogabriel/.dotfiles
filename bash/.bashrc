@@ -20,6 +20,7 @@ alias sv="sudo vim"
 alias nv="nvim"
 alias s="bundle exec rails server"
 alias c="bundle exec rails console"
+alias r="bundle exec rspec"
 alias :q="exit"
 
 # adding color
