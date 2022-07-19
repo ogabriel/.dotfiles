@@ -17,6 +17,8 @@ set splitbelow splitright
 set clipboard=unnamedplus
 set visualbell
 set mouse=a
+set foldmethod=indent
+set nofoldenable
 " set lazyredraw
 if has('mouse_sgr')
     set ttymouse=sgr
