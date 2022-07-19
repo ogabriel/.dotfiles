@@ -472,6 +472,9 @@
   # initalize a repo and immediate add an empty commit, which makes rebase easier.
   init-empty = !"f() { git init && git commit --allow-empty --allow-empty-message --message ''; }; f"
 
+  # empty commit
+  empty = !"f() { git commit --allow-empty --allow-empty-message --message ''; }; f"
+
   ### merge-* ###
 
   # Given a merge commit, find the span of commits that exist(ed).
