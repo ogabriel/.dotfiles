@@ -49,7 +49,7 @@ Plug 'tpope/vim-endwise'                                          " insert end a
 Plug 'tpope/vim-eunuch'                                           " helpers for UNIX shell commands (mkdir, rename, etc.)
 
 " git
-Plug 'tpope/vim-fugitive'                                         " git commands
+Plug 'tpope/vim-fugitive', { 'tag': 'v3.2' }                      " git commands
 Plug 'airblade/vim-gitgutter'                                     " git gutter
 
 " ruby / rails
