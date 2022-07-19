@@ -17,7 +17,7 @@ do
     case $choice in
         1)
             # search
-            apt-get install silversearcher-ag
+            sudo apt install silversearcher-ag fzf
 
             # install this for deoplete
             sudo apt install python3-pip
