@@ -106,8 +106,9 @@
 
   ### branch ###
 
-  # branch description
-  bd = !"git config branch.$(git rev-parse --abbrev-ref HEAD 2>/dev/null).description"
+  # branch deletion
+  bd = branch --delete
+  bD = branch -D
 
   # bra nch - edit the description
   be = branch --edit-description
