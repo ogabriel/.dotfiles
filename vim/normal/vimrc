@@ -114,8 +114,8 @@ au FileType gitcommit 1 | startinsert
 
 " C programming
 com! CRun :!./%<
-com! CCompile :!gcc % -o %<
-com! CCompileRun :!gcc % -o %< && ./%<
+com! CCompile :!gcc % -lm -o %<
+com! CCompileRun :!gcc % -lm -o %< && ./%<
 
 map <silent> cr :w <CR> :CRun <CR>
 map <silent> ccr :w <CR> :CCompileRun <CR>
