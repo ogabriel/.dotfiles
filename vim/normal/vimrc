@@ -26,6 +26,9 @@ endif
 set wildmode=longest,list,full
 set noshowcmd noruler
 set nomousehide
+" disable F1
+:nmap <F1> :echo<CR>
+:imap <F1> <C-o>:echo<CR>
 
 " ------ extra config ------
 syntax on
