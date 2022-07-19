@@ -120,8 +120,8 @@ com! CRun :!./%<
 com! CCompile :!gcc % -lm -o %<
 com! CCompileRun :!gcc % -lm -o %< && ./%<
 
-map <silent> cr :w <CR> :CRun <CR>
-map <silent> ccr :w <CR> :CCompileRun <CR>
+autocmd FileType c map <silent> <F2> :w <CR> :CCompileRun <CR>
+autocmd FileType rust map <silent> <F2> :w <CR> :RustRun <CR>
 
 " git
 com! Gu :Git push
