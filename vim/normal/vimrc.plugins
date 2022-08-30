@@ -79,6 +79,9 @@ let g:markdown_include_jekyll_support = 1
 " JS
 Plug 'pangloss/vim-javascript', { 'for': 'js' }                   " real time markdown editing
 
+" openSCAD
+Plug 'sirtaj/vim-openscad', { 'for': 'scad' }                   " real time markdown editing
+
 " Theme
 Plug 'vim-airline/vim-airline'                                    " status bar
 Plug 'vim-airline/vim-airline-themes'                             " status themes
