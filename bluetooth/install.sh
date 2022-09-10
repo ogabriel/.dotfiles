@@ -19,3 +19,4 @@ sudo apt remove ofono-phonesim
 
 # copy configs
 cp ~/.dotfiles/bluetooth/bluez-hardware.conf /usr/share/spa-0.2/bluez5/
+cp ~/.dotfiles/bluetooth/bluez-monitor.conf /usr/share/pipewire/media-session.d/bluez-monitor.conf
