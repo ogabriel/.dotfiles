@@ -108,6 +108,10 @@ com! RVimRc :source ~/.vimrc
 " start vim at insert mode when commiting
 au FileType gitcommit 1 | startinsert
 
+" Elixir
+au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+au BufRead,BufNewFile *.eex,*.heex set filetype=eelixir
+
 " Rust
 autocmd BufNewFile,BufRead *.rs set filetype=rust
 
