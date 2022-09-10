@@ -109,11 +109,12 @@ com! RVimRc :source ~/.vimrc
 au FileType gitcommit 1 | startinsert
 
 " Elixir
+" avoid Euphoria (ex) filetype problem
 au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
 au BufRead,BufNewFile *.eex,*.heex set filetype=eelixir
 
 " Rust
-autocmd BufNewFile,BufRead *.rs set filetype=rust
+" autocmd BufNewFile,BufRead *.rs set filetype=rust
 
 " C programming
 com! CRun :!./%<
