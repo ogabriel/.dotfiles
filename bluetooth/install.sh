@@ -20,4 +20,4 @@ sudo apt remove ofono-phonesim
 # copy configs
 sudo cp ~/.dotfiles/bluetooth/bluez-hardware.conf /usr/share/spa2.2/bluez5/bluez-hardware.conf
 sudo cp ~/.dotfiles/bluetooth/bluez-monitor.conf /usr/share/pipewire/media-session.d/bluez-monitor.conf
-sudo cp ~/..dotfiles/bluetooth/99-qudelix.rules /etc/udev/rules.d/99-qudelix.rules
+sudo cp ~/.dotfiles/bluetooth/99-qudelix.rules /etc/udev/rules.d/99-qudelix.rules
