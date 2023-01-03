@@ -36,6 +36,13 @@ set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 
+" dont override files, just add new content
+set backupcopy=yes
+
+" copy wuihout
+:map <leader>y "0y
+:map <leader>p "0p
+
 " ------ extra config ------
 syntax on
 filetype plugin indent on
@@ -98,6 +105,7 @@ augroup END
 
 " File information
 com! RelativePath let @+=expand("%")
+com! GithubPath let @+=expand("%")
 com! AbsolutePath let @+=expand("%:p")
 com! FileName let @+=expand("%:t")
 com! PathName let @+=expand("%:p:h")
