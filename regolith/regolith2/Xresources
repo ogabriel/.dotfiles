@@ -1,0 +1,4 @@
+!regolith.look.path: /usr/share/regolith-look/default
+regolith.look.path: /usr/share/regolith-look/ayu-dark
+regolith.wallpaper.file: /home/gabriel/wallpapers/blade runner.jpg
+regolith.wallpaper.options: zoom
