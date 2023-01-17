@@ -136,10 +136,6 @@ com! CCompileRun :!gcc % -lm -o %< && ./%<
 autocmd FileType c map <silent> <F2> :w <CR> :CCompileRun <CR>
 autocmd FileType rust map <silent> <F2> :w <CR> :RustRun <CR>
 
-" git
-com! Gu :Git push
-com! Gp :Git publish
-
 " Solve problem when starting startify on neovim (https://www.reddit.com/r/neovim/comments/5far5t/open_most_recently_used_file_on_startup/)
 " autocmd VimEnter * nested
 "       \  if argc() == 0
