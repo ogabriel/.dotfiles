@@ -36,7 +36,6 @@ set tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 
-<<<<<<< HEAD
 " dont override files, just add new content
 set backupcopy=yes
 
