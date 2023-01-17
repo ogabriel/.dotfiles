@@ -49,7 +49,7 @@ Plug 'tpope/vim-endwise'                                          " insert end a
 Plug 'tpope/vim-eunuch'                                           " helpers for UNIX shell commands (mkdir, rename, etc.)
 
 " git
-Plug 'tpope/vim-fugitive', { 'tag': 'v3.2' }                      " git commands
+Plug 'tpope/vim-fugitive'                      " git commands
 Plug 'airblade/vim-gitgutter'                                     " git gutter
 
 " ruby / rails
@@ -206,3 +206,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_section_y = '%{strftime("%H:%M")}'
 let g:airline_section_warning             = ''
 let g:airline_detect_crypt                = 0
+
+" Fugitive
+:command Gcommit Git commit
