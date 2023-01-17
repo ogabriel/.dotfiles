@@ -12,9 +12,7 @@
 #
 #   * Edit your git config dot file in your home directory such as  `~/.gitconfig`
 #
-#   * Include the path to this file.
-#
-# Example file `~/.gitconfig` with an entry to include the file `~/.gitalias.txt`:
+#   * Include the path to this file.  Example file `~/.gitconfig` with an entry to include the file `~/.gitalias.txt`:
 #
 #     [include]
 #       path = gitalias.txt
@@ -140,6 +138,8 @@
 
   # checkout - update the working tree to match a branch or paths. [same as "o" for "out"]
   co = checkout
+  cob = checkout -b
+  com = checkout master
   con = checkout --no-guess
 
   ### cherry-pick ###
