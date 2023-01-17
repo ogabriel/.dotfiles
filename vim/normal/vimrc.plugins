@@ -209,3 +209,8 @@ let g:airline_detect_crypt                = 0
 
 " Fugitive
 :command Gcommit Git commit
+:command Gc Git commit
+:command Gpush Git push
+:command Gu Git push
+:command Gpull Git pull
+:command Gp Git pull
