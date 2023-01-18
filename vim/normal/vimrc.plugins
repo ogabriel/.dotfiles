@@ -159,6 +159,7 @@ let g:ale_lint_on_enter = 1
 
 " elixir
 let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1
 
 " vim-move
 let g:move_key_modifier                   = 'A'
