@@ -22,13 +22,16 @@ Plug 'dense-analysis/ale'                                         " linter, spot
 Plug 'SirVer/ultisnips'                                           " Fast snippets
 Plug 'honza/vim-snippets'                                         " Snippets examples
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+" complete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
 
 " IDE features
 Plug 'scrooloose/nerdtree'                                        " file tree
@@ -114,15 +117,15 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#21252b ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2c313a ctermbg=4
 
 " autocomplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_ignore_case = 0
-"let g:deoplete#enable_smart_case = 0
-let g:deoplete#delimiters = ['/', '.', '::', ':', '#']
-"let g:deoplete#max_list = 5
-"let g:deoplete#auto_complete_delay = 0
-"let g:deoplete#auto_refresh_delay = 0
-let g:neocomplete#min_pattern_length = 2
-call deoplete#custom#option('num_processes', 1)
+"let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_ignore_case = 0
+""let g:deoplete#enable_smart_case = 0
+"let g:deoplete#delimiters = ['/', '.', '::', ':', '#']
+""let g:deoplete#max_list = 5
+""let g:deoplete#auto_complete_delay = 0
+""let g:deoplete#auto_refresh_delay = 0
+"let g:neocomplete#min_pattern_length = 2
+"call deoplete#custom#option('num_processes', 1)
 
 " multiple cursors
 " let g:multi_cursor_start_key='<C-n>'
