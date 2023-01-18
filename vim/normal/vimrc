@@ -118,7 +118,7 @@ com! MinifyJSON :%!jq -c
 com! RVimRc :source ~/.vimrc
 
 " start vim at insert mode when commiting
-au FileType gitcommit 1 | startinsert
+" au FileType gitcommit 1 | startinsert
 
 " Elixir
 " avoid Euphoria (ex) filetype problem
