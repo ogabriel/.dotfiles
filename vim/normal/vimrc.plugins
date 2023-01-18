@@ -127,7 +127,17 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2c313a ctermbg=4
 "let g:neocomplete#min_pattern_length = 2
 "call deoplete#custom#option('num_processes', 1)
 
-let g:coc_global_extensions = ['coc-snippets', 'coc-json', 'coc-tsserver', 'coc-solargraph', 'coc-elixir', 'coc-rust-analyzer', 'coc-css', 'coc-yaml']
+let g:coc_global_extensions = [
+      \'coc-json',
+      \'coc-tsserver',
+      \'coc-solargraph',
+      \'coc-elixir',
+      \'coc-rust-analyzer',
+      \'coc-css',
+      \'coc-snippets',
+      \'coc-ultisnips',
+      \'coc-yaml'
+      \]
 
 " multiple cursors
 " let g:multi_cursor_start_key='<C-n>'
