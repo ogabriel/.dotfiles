@@ -139,6 +139,17 @@ let g:coc_global_extensions = [
       \'coc-yaml'
       \]
 
+" use <tab> to trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+
+inoremap <expr> <C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-j>"
+inoremap <expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
+
 " multiple cursors
 " let g:multi_cursor_start_key='<C-n>'
 " let g:multi_cursor_start_word_key='g<C-n>'
