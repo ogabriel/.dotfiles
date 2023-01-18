@@ -223,3 +223,4 @@ let g:airline_detect_crypt                = 0
 :command Gu Git push
 :command Gpull Git pull
 :command Gp Git pull
+au FileType gitcommit 1 | startinsert
