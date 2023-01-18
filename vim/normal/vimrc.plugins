@@ -11,7 +11,6 @@ Plug 'godlygeek/tabular'                                          " adjust eleme
 Plug 'tpope/vim-commentary'                                       " comments # use gc to comment lines and selected text
 Plug 'tpope/vim-surround'                                         " configure surrunds around statements
 Plug 'terryma/vim-multiple-cursors'                               " multiple cursors like in ST
-Plug 'junegunn/goyo.vim'                                          " puts the current file in the center of screen
 Plug 'tpope/vim-unimpaired'                                       " it can create new lines with ]
 Plug 'matze/vim-move'                                             " move lines around
 
@@ -150,11 +149,6 @@ nmap <leader>b :Buffers<cr>
 " vim-slash
 " Places the current match at the center of the window.
 noremap <plug>(slash-after) zz
-
-" goyo
-map <C-b> :Goyo<CR>
-let g:goyo_width=100
-let g:goyo_height=100
 
 " UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
