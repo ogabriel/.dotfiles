@@ -130,6 +130,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2c313a ctermbg=4
 let g:coc_global_extensions = [
       \'coc-json',
       \'coc-tsserver',
+      \'coc-word',
       \'coc-solargraph',
       \'coc-elixir',
       \'coc-rust-analyzer',
