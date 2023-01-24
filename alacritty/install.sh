@@ -33,6 +33,9 @@ mkdir -p ~/.bash_completion.d
 cp extra/completions/alacritty.bash ~/.bash_completion.d/alacritty
 echo "source ~/.bash_completion.d/alacritty" >> ~/.bashrc
 
+# register terminal
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
+
 # yml
 mkdir -p ~/.config/alacritty
 ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
