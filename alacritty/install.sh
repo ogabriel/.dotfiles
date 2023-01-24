@@ -7,8 +7,7 @@ sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb
 cd
 mkdir -p opensource
 cd opensource
-git clone https://github.com/alacritty/alacritty.git
-cd alacritty
+(git clone https://github.com/alacritty/alacritty.git && cd alacritty) || (cd alacritty && git pull)
 
 rustup override set stable
 rustup update stable
