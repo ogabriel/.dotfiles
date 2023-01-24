@@ -35,4 +35,4 @@ cp extra/completions/alacritty.bash ~/.bash_completion.d/alacritty
 echo "source ~/.bash_completion.d/alacritty" >> ~/.bashrc
 
 # yml
-
+ln -s ~/.config/alacritty/alacritty.yml ~/.dotfiles/alacritty/alacritty.yml
