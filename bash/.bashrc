@@ -23,6 +23,8 @@ alias c="bundle exec rails console"
 alias r="bundle exec rspec"
 alias :q="exit"
 
+export FZF_DEFAULT_COMMAND="find -L"
+
 # adding color
 alias ls="ls -hN --color=auto --group-directories-first"
 alias grep="grep --color=auto"
