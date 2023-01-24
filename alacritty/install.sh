@@ -7,7 +7,7 @@ sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb
 cd
 mkdir -p opensource
 cd opensource
-(git clone https://github.com/alacritty/alacritty.git && cd alacritty) || (cd alacritty && git pull)
+git clone https://github.com/alacritty/alacritty.git && cd alacritty || cd alacritty && git pull
 
 rustup override set stable
 rustup update stable
@@ -18,7 +18,7 @@ cargo build --release
 infocmp alacritty || sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
 
 # bin and desktop
-sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
+sudo cp target/release/alacritty /usr/local/bin
 sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
