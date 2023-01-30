@@ -137,7 +137,8 @@ let g:coc_global_extensions = [
       \'coc-css',
       \'coc-snippets',
       \'coc-ultisnips',
-      \'coc-yaml'
+      \'coc-yaml',
+      \'coc-highlight'
       \]
 
 " use <tab> to trigger completion and navigate to the next complete item
@@ -247,5 +248,6 @@ let g:airline_detect_crypt                = 0
 :command Gp Git pull
 :command Gb Git blame
 :command Gblame Git blame
+:command Gdelete GRemove
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 au FileType gitcommit 1 | startinsert
