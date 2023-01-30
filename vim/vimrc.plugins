@@ -245,4 +245,7 @@ let g:airline_detect_crypt                = 0
 :command Gu Git push
 :command Gpull Git pull
 :command Gp Git pull
+:command Gb Git blame
+:command Gblame Git blame
+autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 au FileType gitcommit 1 | startinsert
