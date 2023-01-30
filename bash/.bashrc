@@ -23,7 +23,7 @@ alias c="bundle exec rails console"
 alias r="bundle exec rspec"
 alias :q="exit"
 
-export FZF_DEFAULT_COMMAND="find -L"
+export FZF_DEFAULT_COMMAND='find -L -not -path "./.git" -not -path "./.git/*"'
 
 # adding color
 alias ls="ls -hN --color=auto --group-directories-first"
