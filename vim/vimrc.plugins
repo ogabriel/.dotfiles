@@ -131,7 +131,6 @@ let g:coc_global_extensions = [
       \'coc-json',
       \'coc-tsserver',
       \'coc-word',
-      " \'coc-solargraph',
       \'coc-elixir',
       \'coc-rust-analyzer',
       \'coc-css',
@@ -140,6 +139,7 @@ let g:coc_global_extensions = [
       \'coc-yaml',
       \'coc-highlight'
       \]
+      " \'coc-solargraph',
 
 " use <tab> to trigger completion and navigate to the next complete item
 function! CheckBackspace() abort
