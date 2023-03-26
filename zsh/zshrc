@@ -78,6 +78,7 @@ plugins=(
 	fzf
 	ag
 	asdf
+	aliases
 )
 
 # link to docs: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
