@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
+##### ALIAS #####
 alias v="vim ."
 alias sv="sudo vim"
 alias nv="nvim"
@@ -118,4 +118,8 @@ alias c="bundle exec rails console"
 alias r="bundle exec rspec"
 alias :q="exit"
 
+##### SCRIPTS #####
 export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.hidden_scripts
+
+# Add this line to your .bashrc or a shell script.
+. "~/.cache/wal/colors.sh"
