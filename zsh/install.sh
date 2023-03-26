@@ -7,3 +7,5 @@ ln -sf ~/.dotfiles/zsh/zshrc ~/.zshrc
 chsh -s $(which zsh)
 
 echo "Dont forget to reboot!"
+
+git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
