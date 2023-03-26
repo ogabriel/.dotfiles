@@ -77,6 +77,7 @@ plugins=(
 	zsh-vi-mode
 	fzf
 	ag
+	asdf
 )
 
 # link to docs: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
@@ -118,8 +119,15 @@ alias c="bundle exec rails console"
 alias r="bundle exec rspec"
 alias :q="exit"
 
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
 ##### SCRIPTS #####
 export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.hidden_scripts
 
-# Add this line to your .bashrc or a shell script.
-. "~/.cache/wal/colors.sh"
+# import colorscheme from 'wal'
+(cat ~/.cache/wal/sequences &)
+
+# alacritty
+source ~/.bash_completion.d/alacritty
