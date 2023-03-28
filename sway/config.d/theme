@@ -24,7 +24,7 @@ exec swaybg -i $wallpaper
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"
 for_window [shell="x_wayland"] title_format "%class - %title"
 
-rlient.focused          $color2   $color2   $color1   $color2   $color2
+client.focused          $color2   $color2   $color1   $color2   $color2
 client.focused_inactive $color3   $color3   $color1   $color3   $color3
 client.unfocused        $color0   $color0   $color0   $color0   $color0
 client.urgent           $color15  $color15  $color7   $color15  $color15
