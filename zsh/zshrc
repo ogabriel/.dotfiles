@@ -71,15 +71,26 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-	docker
-	kubectl
+	aliases
 	tmux
 	zsh-vi-mode
+	# search
 	fzf
 	ag
+	# dev
 	asdf
-	aliases
+	git
+	git-auto-fetch
+	gitfast
+	git-prompt
+	# devops
+	gcloud
+	kubectl
+	docker
+	# zsh
+	zsh-autosuggestions
+	zsh-completions
+	zsh-syntax-highlighting
 )
 
 # link to docs: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
