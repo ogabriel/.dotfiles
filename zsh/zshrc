@@ -129,6 +129,3 @@ export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.hidden_scr
 
 # import colorscheme from 'wal'
 (cat ~/.cache/wal/sequences &)
-
-# alacritty
-source ~/.bash_completion.d/alacritty
