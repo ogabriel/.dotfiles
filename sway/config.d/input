@@ -11,11 +11,6 @@ input type:touchpad {
 }
 
 # Read `man 5 sway-input` for more information about this section.
-#
-input type:keyboard {
-    xkb_layout us,us_intl
-    xkb_options ctrl:swapcaps
-}
 
 input "60653:13923:Fancytech_FancyAlice66_Keyboard" {
     xkb_layout us,us_intl
@@ -27,8 +22,27 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_options ctrl:swapcaps
 }
 
-input type:keyboard {
-    xkb_layout br
+# input type:keyboard {
+#     xkb_layout us,us_intl,br
+#     xkb_options ctrl:swapcaps
+# }
+
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    tap enabled
+    natural_scroll disabled
+    accel_profile "flat"
+    pointer_accel 0.7
+}
+
+
+input "2:10:TPPS/2_Elan_TrackPoint" {
+    accel_profile "flat"
+    pointer_accel 0.4
+}
+
+input "9354:23343:XCTECH_Wireless-Receiver" {
+    accel_profile "flat"
+    pointer_accel -0.5
 }
 
 bindsym Mod4+Space exec swaymsg input type:keyboard xkb_switch_layout next
