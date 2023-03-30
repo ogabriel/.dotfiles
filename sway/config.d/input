@@ -13,11 +13,28 @@ input type:touchpad {
 # Read `man 5 sway-input` for more information about this section.
 #
 input type:keyboard {
-    xkb_layout "us"
+    xkb_layout us,us_intl
     xkb_options ctrl:swapcaps
 }
 
-exec_always {
-    'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
-    'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
+input "60653:13923:Fancytech_FancyAlice66_Keyboard" {
+    xkb_layout us,us_intl
+    xkb_options ctrl:swapcaps
 }
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout us,us_intl
+    xkb_options ctrl:swapcaps
+}
+
+input type:keyboard {
+    xkb_layout br
+}
+
+bindsym Mod4+Space exec swaymsg input type:keyboard xkb_switch_layout next
+bindsym Mod4+Shift+Space exec swaymsg input type:keyboard xkb_switch_layout prev
+
+# exec_always {
+#     'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
+#     'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
+# }
