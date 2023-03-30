@@ -34,6 +34,7 @@ input type:keyboard {
 bindsym Mod4+Space exec swaymsg input type:keyboard xkb_switch_layout next
 bindsym Mod4+Shift+Space exec swaymsg input type:keyboard xkb_switch_layout prev
 
+# this breaks things
 # exec_always {
 #     'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
 #     'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
