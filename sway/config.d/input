@@ -37,7 +37,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
 input "2:10:TPPS/2_Elan_TrackPoint" {
     accel_profile "flat"
-    pointer_accel 0.4
+    pointer_accel 0
 }
 
 input "9354:23343:XCTECH_Wireless-Receiver" {
