@@ -74,6 +74,7 @@ plugins=(
 	aliases
 	tmux
 	zsh-vi-mode
+	timer
 	# search
 	fzf
 	ag
@@ -82,7 +83,6 @@ plugins=(
 	git
 	git-auto-fetch
 	gitfast
-	git-prompt
 	# devops
 	gcloud
 	kubectl
