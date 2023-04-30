@@ -14,7 +14,6 @@ input type:touchpad {
 
 input "60653:13923:Fancytech_FancyAlice66_Keyboard" {
     xkb_layout us,us_intl
-    xkb_options ctrl:swapcaps
 }
 
 input "1:1:AT_Translated_Set_2_keyboard" {
