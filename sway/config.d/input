@@ -20,6 +20,10 @@ input "54797:12800:Hoksi_Technology_DURGOD_Taurus_K320_(QMK)_Keyboard" {
     xkb_layout us,us_intl
 }
 
+input "22634:64:CSTC40_CSTC40_Keyboard" {
+    xkb_layout us,us_intl
+}
+
 input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_layout us,us_intl
     xkb_options ctrl:swapcaps
