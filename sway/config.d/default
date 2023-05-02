@@ -65,7 +65,7 @@ exec swayidle -w\
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
 #
 # Moving around:

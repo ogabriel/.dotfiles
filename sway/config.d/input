@@ -14,7 +14,14 @@ input type:touchpad {
 
 input "60653:13923:Fancytech_FancyAlice66_Keyboard" {
     xkb_layout us,us_intl
-    xkb_options ctrl:swapcaps
+}
+
+input "54797:12800:Hoksi_Technology_DURGOD_Taurus_K320_(QMK)_Keyboard" {
+    xkb_layout us,us_intl
+}
+
+input "22634:64:CSTC40_CSTC40_Keyboard" {
+    xkb_layout us,us_intl
 }
 
 input "1:1:AT_Translated_Set_2_keyboard" {
@@ -27,17 +34,20 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 #     xkb_options ctrl:swapcaps
 # }
 
+##### MOUSE #####
+
 input "2:7:SynPS/2_Synaptics_TouchPad" {
     tap enabled
-    natural_scroll disabled
+    scroll_factor 0.3
+    natural_scroll enabled
     accel_profile "flat"
     pointer_accel 0.7
 }
 
-
 input "2:10:TPPS/2_Elan_TrackPoint" {
+    scroll_factor 0.3
     accel_profile "flat"
-    pointer_accel 0.4
+    pointer_accel 0.1
 }
 
 input "9354:23343:XCTECH_Wireless-Receiver" {
