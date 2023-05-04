@@ -139,5 +139,8 @@ alias l='ls -CF'
 ##### SCRIPTS #####
 export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.hidden_scripts
 
+##### history on erlang #####
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # import colorscheme from 'wal'
 (cat ~/.cache/wal/sequences &)
