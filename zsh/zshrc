@@ -137,7 +137,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 ##### SCRIPTS #####
-export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.hidden_scripts
+export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.docker_scripts:$HOME/.hidden_scripts
 
 ##### history on erlang #####
 export ERL_AFLAGS="-kernel shell_history enabled shell_history_file_bytes 1024000"
