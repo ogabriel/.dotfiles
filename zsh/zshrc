@@ -140,7 +140,6 @@ alias br="bundle exec rspec"
 alias r="bin/rspec"
 
 # Elixir/Phoenix
-alias iex="rlwrap iex"
 alias i="rlwrap iex -S mix"
 alias ps="mix phx.server"
 alias ips="rlwrap iex -S mix phx.server"
@@ -149,7 +148,10 @@ alias ips="rlwrap iex -S mix phx.server"
 export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.docker_scripts:$HOME/.hidden_scripts
 
 ##### history on erlang #####
-export ERL_AFLAGS="-kernel shell_history enabled shell_history_file_bytes 1024000"
+export ERL_AFLAGS="\
+  -kernel shell_history enabled \
+  -kernel shell_history_file_bytes 1048576 \
+  -kernel shell_history_drop '[\"q().\",\"init:stop().\",\"halt().\"]'"
 
 # import colorscheme from 'wal'
 (cat ~/.cache/wal/sequences &)
