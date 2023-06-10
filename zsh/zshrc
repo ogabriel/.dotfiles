@@ -127,14 +127,23 @@ fi
 alias v="vim ."
 alias sv="sudo vim"
 alias nv="nvim"
-alias s="bundle exec rails server"
-alias c="bundle exec rails console"
-alias r="bundle exec rspec"
 alias :q="exit"
 
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Ruby/Rails
+alias s="bundle exec rails server"
+alias c="bundle exec rails console"
+alias br="bundle exec rspec"
+alias r="bin/rspec"
+
+# Elixir/Phoenix
+alias iex="rlwrap iex"
+alias i="rlwrap iex -S mix"
+alias ps="mix phx.server"
+alias ips="rlwrap iex -S mix phx.server"
 
 ##### SCRIPTS #####
 export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.docker_scripts:$HOME/.hidden_scripts
