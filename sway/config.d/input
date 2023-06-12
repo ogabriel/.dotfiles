@@ -4,35 +4,30 @@
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Put your touchpad's ID to replace "Touchpad-ID" (keep the quotation marks)
 
-input type:touchpad {
-    dwt enabled
-    tap enabled
-    natural_scroll enabled
-}
+# input type:touchpad {
+#     dwt enabled
+#     tap enabled
+#     natural_scroll enabled
+# }
 
 # Read `man 5 sway-input` for more information about this section.
 
-input "60653:13923:Fancytech_FancyAlice66_Keyboard" {
-    xkb_layout us,us_intl
-}
+##### KEYBOARD #####
 
-input "54797:12800:Hoksi_Technology_DURGOD_Taurus_K320_(QMK)_Keyboard" {
-    xkb_layout us,us_intl
-}
+bindsym Mod4+Space exec swaymsg input type:keyboard xkb_switch_layout next
+bindsym Mod4+Shift+Space exec swaymsg input type:keyboard xkb_switch_layout prev
 
-input "22634:64:CSTC40_CSTC40_Keyboard" {
-    xkb_layout us,us_intl
+input type:keyboard {
+    xkb_layout us,us_intl,br
 }
 
 input "1:1:AT_Translated_Set_2_keyboard" {
-    xkb_layout us,us_intl
     xkb_options ctrl:swapcaps
 }
 
-# input type:keyboard {
-#     xkb_layout us,us_intl,br
-#     xkb_options ctrl:swapcaps
-# }
+# input "60653:13923:Fancytech_FancyAlice66_Keyboard" {  }
+# input "54797:12800:Hoksi_Technology_DURGOD_Taurus_K320_(QMK)" { }
+# input "22634:64:CSTC40_CSTC40_Keyboard" {  }
 
 ##### MOUSE #####
 
@@ -54,9 +49,6 @@ input "9354:23343:XCTECH_Wireless-Receiver" {
     accel_profile "flat"
     pointer_accel -0.5
 }
-
-bindsym Mod4+Space exec swaymsg input type:keyboard xkb_switch_layout next
-bindsym Mod4+Shift+Space exec swaymsg input type:keyboard xkb_switch_layout prev
 
 # this breaks things
 # exec_always {
