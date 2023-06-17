@@ -151,6 +151,7 @@ export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.docker_scr
 export ERL_AFLAGS="\
   -kernel shell_history enabled \
   -kernel shell_history_file_bytes 1048576 \
+  -kernel shell_history_path '\"$HOME/.erlang-history\"' \
   -kernel shell_history_drop '[\"q().\",\"init:stop().\",\"halt().\"]'"
 
 # import colorscheme from 'wal'
