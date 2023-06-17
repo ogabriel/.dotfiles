@@ -5,7 +5,6 @@ configuration {
     show-icons: true;
     terminal: "alacritty";
 	opacity: 50;
-	clipboard-run-command: "xargs {cmd}";
 /*	font: "mono 12";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
