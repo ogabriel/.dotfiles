@@ -13,23 +13,24 @@
     ],
 
     "modules-center": [
+        "cpu",
+        "memory",
+		"temperature",
+        "battery",
+		"custom/gpu-usage",
     ],
 
     "modules-right": [
         "network",
         "idle_inhibitor",
-        "memory",
-        "cpu",
         "pulseaudio",
         "custom/keyboard-layout",
-        "battery",
         //"custom/PBPbattery",
         "backlight#icon",
         "backlight#value",
         "clock",
         "tray",
-		"temperature",
-        //"custom/weather",
+        "custom/weather",
         "custom/power",
     ],
 
@@ -172,7 +173,15 @@
     "tray": {
         "icon-size": 18,
         "spacing":10,
-     },
+    },
+
+	"temperature": {
+		"thermal-zone": 2,
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"critical-threshold": 80,
+		"format-critical": "{temperatureC}°C ",
+		"format": "{temperatureC}°C "
+ 	},
 
     "backlight#icon": {
         "format": "{icon}",
@@ -216,4 +225,11 @@
         "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
         "tooltip": false,
     },
+
+	"custom/gpu-usage": {
+	  "exec": "cat /sys/class/hwmon/hwmon7/device/gpu_busy_percent",
+	  "format": "GPU: {}%",
+	  "return-type": "",
+	  "interval": 1
+	}
 }
