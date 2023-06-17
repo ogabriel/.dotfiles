@@ -1,7 +1,11 @@
-@import "~/.cache/wal/colors-rofi-dark"
-
+/* general configs */
 configuration {
-/*	modes: "window,drun,run,ssh";*/
+	modes: "drun,window,filebrowser,clipboard:greenclip print,run,ssh";
+	combi-modes: "clipboard:greenclip print,drun,window";
+    show-icons: true;
+    terminal: "alacritty";
+	opacity: 50;
+	clipboard-run-command: "xargs {cmd}";
 /*	font: "mono 12";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
@@ -34,8 +38,7 @@ configuration {
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-/*	combi-modes: "window,run";*/
-/*	matching: "normal";*/
+	matching: "fuzzy";
 /*	tokenize: true;*/
 /*	m: "-5";*/
 /*	filter: ;*/
@@ -44,7 +47,7 @@ configuration {
 /*	scroll-method: 0;*/
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
-/*	max-history-size: 25;*/
+	max-history-size: 50;
 /*	combi-hide-mode-prefix: false;*/
 /*	combi-display-format: "{mode} {text}";*/
 /*	matching-negate-char: '-' /* unsupported */;*/
@@ -58,13 +61,17 @@ configuration {
 /*	refilter-timeout-limit: 300;*/
 /*	xserver-i300-workaround: false;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
+	display-drun: "Applications";
 /*	display-window: ;*/
-/*	display-run: ;*/
+	display-run: "Run from terminal";
 /*	display-ssh: ;*/
-/*	display-drun: ;*/
 /*	display-combi: ;*/
 /*	display-keys: ;*/
 /*	display-filebrowser: ;*/
+}
+
+/* shortcuts */
+configuration {
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
 /*	kb-secondary-paste: "Control+v,Insert";*/
 /*	kb-secondary-copy: "Control+c";*/
@@ -78,7 +85,7 @@ configuration {
 /*	kb-remove-word-back: "Control+Alt+h,Control+BackSpace";*/
 /*	kb-remove-word-forward: "Control+Alt+d";*/
 /*	kb-remove-char-forward: "Delete,Control+d";*/
-/*	kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";*/
+	kb-remove-char-back: "BackSpace,Shift+BackSpace";
 	kb-remove-to-eol: "";
 /*	kb-remove-to-sol: "Control+u";*/
 	kb-accept-entry: "Control+m,Return,KP_Enter";
@@ -86,9 +93,9 @@ configuration {
 /*	kb-accept-custom-alt: "Control+Shift+Return";*/
 /*	kb-accept-alt: "Shift+Return";*/
 /*	kb-delete-entry: "Shift+Delete";*/
-/*	kb-mode-next: "Shift+Right,Control+Tab";*/
-/*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
-/*	kb-mode-complete: "Control+l";*/
+	kb-mode-next: "Shift+Right,Control+Tab,Control+l";
+	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab,Control+h";
+	kb-mode-complete: "";
 /*	kb-row-left: "Control+Page_Up";*/
 /*	kb-row-right: "Control+Page_Down";*/
 	kb-row-up: "Up,Control+k";
@@ -142,12 +149,16 @@ configuration {
 /*	me-select-entry: "MousePrimary";*/
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
+
   timeout {
       action: "kb-cancel";
       delay:  0;
   }
+
   filebrowser {
       directories-first: true;
       sorting-method:    "name";
   }
 }
+
+@import "~/.cache/wal/colors-rofi-dark"
