@@ -21,7 +21,7 @@ set $term-float alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi -c ~/.config/wofi/config -I
+set $menu rofi
 
 set $powermenu ~/.config/waybar/scripts/power-menu.sh
 
@@ -52,10 +52,7 @@ exec swayidle -w\
     bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+Space exec $menu
-
-    # Activities
-    bindsym $mod+p exec ~/.config/wofi/windows.py
+    bindsym $mod+Space exec $menu -show drun
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
