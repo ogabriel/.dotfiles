@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 
-require("lazy").setup("plugins", {})
+require("lazy").setup("plugins")
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
