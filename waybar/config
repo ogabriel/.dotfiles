@@ -23,6 +23,7 @@
     "modules-right": [
         "network",
         "idle_inhibitor",
+		"custom/audio_idle_inhibitor",
         "pulseaudio",
         "custom/keyboard-layout",
         //"custom/PBPbattery",
@@ -43,6 +44,19 @@
             "deactivated": ""
         }
     },
+
+	"custom/audio_idle_inhibitor": {
+		"format": "{icon}",
+		"exec": "sway-audio-idle-inhibit --dry-print-both-waybar",
+		"exec-if": "which sway-audio-idle-inhibit",
+		"return-type": "json",
+		"format-icons": {
+			"output": "",
+			"input": "",
+			"output-input": "  ",
+			"none": ""
+		}
+	},
 
     "battery": {
         "states": {
