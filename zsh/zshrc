@@ -141,7 +141,7 @@ alias r="bin/rspec"
 
 # Elixir/Phoenix
 alias i="rlwrap -a -A iex -S mix"
-alias ps="mix phx.server"
+alias mps="mix phx.server"
 alias ips="rlwrap -a -A iex -S mix phx.server"
 
 ##### SCRIPTS #####
