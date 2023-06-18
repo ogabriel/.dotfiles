@@ -49,17 +49,22 @@ exec swayidle -w\
     bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+Space exec $menu -show drun
+    bindsym $mod+Space exec rofi -show drun
 
+    # Reload the configuration file
+    bindsym $mod+Shift+r reload
+
+#
+# Floating
+#
+    # toggle floating
+    bindsym $mod+Shift+f floating toggle
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
-
-    # Reload the configuration file
-    bindsym $mod+Shift+r reload
 
 #
 # Moving around:
