@@ -27,6 +27,6 @@ return {
   end,
   keys = {
     { '<leader><leader>', ':NvimTreeToggle<cr>' },
-    { '<leader>c', ':NvimTreeFindFileToggle<cr>' },
+    { '<leader>c', ':NvimTreeFindFile<cr>' },
   }
 }
