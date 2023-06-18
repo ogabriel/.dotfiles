@@ -39,7 +39,7 @@ exec swayidle -w\
 #
 # Basics:
 #
-    # Start a floating terminal
+    # Start terminal
     bindsym $mod+Return exec alacritty
 
     # Open the power menu
