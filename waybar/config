@@ -241,5 +241,21 @@
 	  "format": "GPU: {}%",
 	  "return-type": "",
 	  "interval": 1
-	}
+	},
+
+    "custom/DP-2": {
+        "format": "DP-2🖥️",
+        "on-click": "exec swaymsg output DP-2 disable",
+        "on-scroll-down": "exec swaymsg output DP-2 disable",
+        "on-scroll-up": "exec swaymsg output DP-2 enable",
+        "tooltip": false
+    },
+
+    "custom/eDP-1": {
+        "format": "eDP-1🖥️",
+        "on-click": "exec swaymsg output eDP-1 disable",
+        "on-scroll-down": "exec swaymsg output eDP-1 disable",
+        "on-scroll-up": "exec swaymsg output DP-2 enable",
+        "tooltip": false
+    },
 }
