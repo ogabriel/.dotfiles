@@ -2,8 +2,8 @@
 let mapleader = "\<Space>"
 
 " ------ load plugins ------
-if filereadable(expand("vimrc.plugins"))
-  source vimrc.plugins
+if filereadable(expand("~/.vim/vimrc.plugins"))
+  source ~/.vim/vimrc.plugins
 endif
 
 " ------ sensible defaults ------
