@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# dependencies
+# - ripgrep
+
 if [ -d ~/.config/nvim ]; then
     mv ~/.config/nvim ~/.config/old_nvim
 fi
