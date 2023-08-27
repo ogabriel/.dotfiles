@@ -87,7 +87,7 @@ Plug 'sirtaj/vim-openscad', { 'for': 'scad' }                   " real time mark
 " Theme
 Plug 'vim-airline/vim-airline'                                    " status bar
 Plug 'vim-airline/vim-airline-themes'                             " status themes
-Plug 'nathanaelkane/vim-indent-guides'                            " color indented columns
+Plug 'nathanaelkane/vim-indent-guides'                            " color indented columns (tab and such)
 Plug 'sonph/onehalf', {'rtp': 'vim/'}                             " my current theme
 
 call plug#end()
