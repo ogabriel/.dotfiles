@@ -1,7 +1,4 @@
-vim.cmd [[
-    " git
-    au FileType gitcommit execute "normal! O" | startinsert 
-
+vim.cmd([[
     " paths
     com! RelativePath let @+=expand("%")
     com! GithubPath let @+=expand("%")
@@ -20,4 +17,4 @@ vim.cmd [[
     set splitbelow splitright
 
     command! -bar -nargs=1 -complete=file CD execute ":cd " . fnamemodify(<q-args>, ':p:h') .
-]]
+]])
