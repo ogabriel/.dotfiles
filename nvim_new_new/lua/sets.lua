@@ -1,7 +1,11 @@
 vim.g.mapleader = " "
 
+vim.opt.clipboard = "unnamedplus"
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
+
+vim.opt.splitright = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -17,7 +21,7 @@ vim.opt.backup = false
 vim.opt.undofile = true
 
 --coisas e busca
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.scrolloff = 10
