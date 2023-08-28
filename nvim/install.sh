@@ -2,9 +2,10 @@
 
 # dependencies
 # - ripgrep
+# - make (fzf)
 
 if [ -d ~/.config/nvim ]; then
-    mv ~/.config/nvim ~/.config/old_nvim
+    mv ~/.config/nvim ~/.config/nvim.bak
 fi
 
-ln -sf ~/.dotfiles/nvim_new_new ~/.config/nvim
+ln -sf ~/.dotfiles/nvim ~/.config/nvim
