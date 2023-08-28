@@ -1,18 +1,43 @@
 return {
-	'nvim-telescope/telescope.nvim', tag = '0.1.2',
-	dependencies = { 'nvim-lua/plenary.nvim' },
+	"nvim-telescope/telescope.nvim",
+	tag = "0.1.2",
+	dependencies = {
+		{ "nvim-lua/plenary.nvim", lazy = true },
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			lazy = true,
+			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+		},
+	},
+	config = function(_)
+		local actions = require("telescope.actions")
 
-	config = function(plugin)
-		require('onedark').setup {
-			style = 'darker'
-		}
+		require("telescope").setup({
+			defaults = {
+				mappings = {
+					i = {
+						["<esc>"] = actions.close,
+						["<C-j>"] = actions.move_selection_next,
+						["<C-k>"] = actions.move_selection_previous,
+					},
+				},
+			},
+			extensions = {
+				fzf = {
+					fuzzy = true, -- false will only do exact matching
+					override_generic_sorter = true, -- override the generic sorter
+					override_file_sorter = true, -- override the file sorter
+					case_mode = "smart_case", -- or "ignore_case" or "respect_case"
+					-- the default case_mode is "smart_case"
+				},
+			},
+		})
 
-		local builtin = require('telescope.builtin')
-		local telescope_builtin = require('telescope.builtin')
-
-		vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-		vim.keymap.set('n', '<C-f>', builtin.live_grep, {})
-		vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-		vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+		require("telescope").load_extension("fzf")
 	end,
+	keys = {
+		{ "<C-p>", mode = { "n", "o", "i" }, "<cmd>lua require('telescope.builtin').find_files()<cr>" },
+		{ "<C-f>", mode = { "n", "o", "i" }, "<cmd>lua require('telescope.builtin').live_grep()<cr>" },
+		{ "<leader>gf", "<cmd>lua require('telescope.builtin').git_files()<cr>" },
+	},
 }
