@@ -1,8 +1,13 @@
-if empty(glob('~/.local/share/vim/plugged/vim-plug'))
-  silent !curl -fLo ~/.local/share/vim/plugged/vim-plug --create-dirs
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
 
 call plug#begin('~/.local/share/vim/plugged')
 
@@ -34,7 +39,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " endif
 
 " IDE features
-Plug 'scrooloose/nerdtree'                                        " file tree
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'kopischke/vim-fetch'                                        " open file with line and column number
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fuzzy search
 Plug 'junegunn/fzf.vim'
@@ -250,5 +255,3 @@ let g:airline_detect_crypt                = 0
 :command Gblame Git blame
 :command Gdelete GRemove
 :command Gmove GMove
-autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
-au FileType gitcommit 1 | startinsert
