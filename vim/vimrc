@@ -1,11 +1,6 @@
 " Define leader from the start
 let mapleader = "\<Space>"
 
-" ------ load plugins ------
-if filereadable(expand("~/.vim/vimrc.plugins"))
-  source ~/.vim/vimrc.plugins
-endif
-
 " ------ sensible defaults ------
 set hlsearch
 set incsearch
@@ -141,3 +136,8 @@ autocmd FileType rust map <silent> <F2> :w <CR> :RustRun <CR>
 "       \|     execute 'edit' fnameescape(last[0])
 "       \|   endif
 "       \| endif
+
+" ------ load plugins ------
+if filereadable(expand("~/.vim/vimrc.plugins"))
+  source ~/.vim/vimrc.plugins
+endif
