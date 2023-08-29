@@ -24,6 +24,7 @@ return {
 				elixir = { require("formatter.filetypes.elixir").mixformat },
 				lua = { require("formatter.filetypes.lua").stylua },
 				html = { require("formatter.filetypes.html").prettier },
+				sh = { require("formatter.filetypes.sh").shfmt },
 				-- eelixir = {
 				-- 	require("formatter.util").withl(require("formatter.defaults").prettier, "html"),
 				-- },
