@@ -140,9 +140,11 @@ alias br="bundle exec rspec"
 alias r="bin/rspec"
 
 # Elixir/Phoenix
-alias i="rlwrap -a -A iex -S mix"
+alias mi="iex -S mix"
 alias mps="mix phx.server"
-alias ips="rlwrap -a -A iex -S mix phx.server"
+alias mc="mix do deps.compile, compile"
+alias mcc="rm -rf _build && mix do clean, deps.compile, compile"
+alias mips="iex -S mix phx.server"
 
 ##### SCRIPTS #####
 export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.docker_scripts:$HOME/.hidden_scripts
