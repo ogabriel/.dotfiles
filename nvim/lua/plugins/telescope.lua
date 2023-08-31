@@ -36,8 +36,8 @@ return {
 		require("telescope").load_extension("fzf")
 	end,
 	keys = {
-		{ "<c-p>", mode = { "n", "o", "i" }, "<cmd>lua require('telescope.builtin').find_files()<cr>" },
-		{ "<c-f>", mode = { "n", "o", "i" }, "<cmd>lua require('telescope.builtin').live_grep()<cr>" },
-		{ "<leader>gf", "<cmd>lua require('telescope.builtin').git_files()<cr>" },
+		{ "<c-p>", mode = { "n", "o", "i" }, ":Telescope find_files<cr>" },
+		{ "<c-f>", mode = { "n", "o", "i" }, ":Telescope grep_string search=<cr>" },
+		-- { "<leader>gf", "<cmd>lua require('telescope.builtin').git_files()<cr>" },
 	},
 }
