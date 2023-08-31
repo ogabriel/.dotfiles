@@ -5,6 +5,9 @@ return {
 	opts = {
 		multi_window = true,
 		modes = {
+			search = {
+				enabled = false,
+			},
 			char = {
 				enabled = true,
 				jump_labels = true,
