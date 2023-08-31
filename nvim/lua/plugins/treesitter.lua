@@ -2,9 +2,11 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	config = function()
-		local configs = require("nvim-treesitter.configs")
+		vim.opt.foldmethod = "expr"
+		vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+		vim.opt.foldlevel = 10
 
-		configs.setup({
+		require("nvim-treesitter.configs").setup({
 			ensure_installed = {
 				"bash",
 				"c",
