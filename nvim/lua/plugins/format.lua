@@ -17,6 +17,8 @@ return {
 		-- 	group = group,
 		-- })
 
+		local util = require("formatter.util")
+
 		require("formatter").setup({
 			logging = true,
 			log_level = vim.log.levels.WARN,
@@ -25,6 +27,28 @@ return {
 				lua = { require("formatter.filetypes.lua").stylua },
 				html = { require("formatter.filetypes.html").prettier },
 				sh = { require("formatter.filetypes.sh").shfmt },
+				sql = {
+					function()
+						return {
+							exe = "pg_format -",
+							stdin = true,
+						}
+					end,
+				},
+				ruby = {
+					function()
+						return {
+							exe = "rubocop",
+							args = {
+								"--stdin",
+								util.escape_path(util.get_current_buffer_file_name()),
+								"--format",
+								"files",
+							},
+							stdin = true,
+						}
+					end,
+				},
 				-- eelixir = {
 				-- 	require("formatter.util").withl(require("formatter.defaults").prettier, "html"),
 				-- },
