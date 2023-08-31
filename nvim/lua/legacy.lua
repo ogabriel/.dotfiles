@@ -1,7 +1,6 @@
 vim.cmd([[
     " paths
     com! RelativePath let @+=expand("%")
-    com! GithubPath let @+=expand("%")
     com! AbsolutePath let @+=expand("%:p")
     com! FileName let @+=expand("%:t")
     com! PathName let @+=expand("%:p:h")
