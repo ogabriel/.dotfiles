@@ -24,6 +24,7 @@ return {
 				"html",
 				"css",
 				"csv",
+				"yaml",
 				"dockerfile",
 				"surface",
 			},
