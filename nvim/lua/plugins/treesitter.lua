@@ -11,6 +11,7 @@ return {
 				"bash",
 				"c",
 				"rust",
+				"go",
 				"lua",
 				"vim",
 				"vimdoc",
