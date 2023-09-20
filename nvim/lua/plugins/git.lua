@@ -17,6 +17,7 @@ return {
 	},
 	{
 		"tpope/vim-fugitive",
+		cmd = { "Git", "GRename", "GDelete", "GMove" },
 		keys = {
 			{ "<leader>gs", ":Git<cr>" },
 			{ "<leader>ga", ":Gwrite<cr>" },
