@@ -16,4 +16,11 @@ vim.cmd([[
     set splitbelow splitright
 
     command! -bar -nargs=1 -complete=file CD execute ":cd " . fnamemodify(<q-args>, ':p:h') .
+
+    nnoremap <leader>d "_d
+    vnoremap <leader>d "_d
+    vnoremap <leader>p "_dP
 ]])
+
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
