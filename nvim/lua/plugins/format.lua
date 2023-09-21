@@ -27,6 +27,7 @@ return {
 				lua = { require("formatter.filetypes.lua").stylua },
 				html = { require("formatter.filetypes.html").prettier },
 				sh = { require("formatter.filetypes.sh").shfmt },
+				go = { require("formatter.filetypes.go").gofmt },
 				sql = {
 					function()
 						return {
