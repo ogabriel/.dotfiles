@@ -1,12 +1,17 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.2",
+	branch = "0.1.x",
 	dependencies = {
-		{ "nvim-lua/plenary.nvim", lazy = true },
+		{
+			"nvim-lua/plenary.nvim",
+			lazy = true,
+		},
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
-			lazy = true,
-			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+			build = "make",
+			config = function()
+				require("telescope").load_extension("fzf")
+			end,
 		},
 	},
 	config = function(_)
