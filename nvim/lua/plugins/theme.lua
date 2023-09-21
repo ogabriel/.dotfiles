@@ -5,7 +5,7 @@ return {
 		vim.opt.termguicolors = true
 
 		require("onedark").setup({
-			style = "cool",
+			style = "dark",
 		})
 
 		require("onedark").load()
