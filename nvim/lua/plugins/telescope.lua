@@ -25,6 +25,15 @@ return {
 						["<C-k>"] = actions.move_selection_previous,
 					},
 				},
+				preview = {
+					treesitter = {
+						disable = {
+							"javascript",
+							"css",
+							"scss",
+						},
+					},
+				},
 			},
 			extensions = {
 				fzf = {
