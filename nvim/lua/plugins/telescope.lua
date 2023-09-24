@@ -45,24 +45,24 @@ return {
 			},
 		})
 
-		--setup always later
+		--extensions
 		telescope.load_extension("fzf")
 	end,
 	keys = {
 		{
 			"<c-p>",
 			mode = { "n", "v" },
-			"<cmd>lua require('telescope.builtin').find_files()<cr>",
+			":Telescope find_files<CR>",
 		},
 		{
 			"<c-f>",
 			mode = { "n" },
-			"<cmd>lua require('telescope.builtin').grep_string{ search = \"\" }<cr>",
+			':Telescope grep_string search=""<CR>',
 		},
 		{
 			"<c-f>",
 			mode = { "v" },
-			"<cmd>lua require('telescope.builtin').grep_string()<cr>",
+			":Telescope grep_string()<cr>",
 		},
 	},
 }
