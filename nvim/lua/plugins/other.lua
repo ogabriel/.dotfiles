@@ -1,12 +1,12 @@
 return {
-	-- "rgroli/other.nvim",
-	--		event = "VeryLazy",
-	-- config = function(_)
-	-- 	require("other-nvim").setup({
-	-- 		mappings = {
-	-- 			"rails",
-	-- 			"golang",
-	-- 		},
-	-- 	})
-	-- end,
+	"rgroli/other.nvim",
+	config = function(opts)
+		require("other-nvim").setup(opts)
+	end,
+	opts = {
+		mappings = {
+			"rails",
+			"golang",
+		},
+	},
 }
