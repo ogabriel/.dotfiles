@@ -18,6 +18,13 @@ return {
 
 		telescope.setup({
 			defaults = {
+				prompt_prefix = "🔍 ",
+				layout_strategy = "flex",
+				layout_config = {
+					flex = {
+						flip_columns = 120,
+					},
+				},
 				mappings = {
 					i = {
 						["<esc>"] = actions.close,
