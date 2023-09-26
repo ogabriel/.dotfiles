@@ -1,9 +1,11 @@
 # Assign workspaces
-assign [app_id="google-chrome"] 2
-for_window [app_id="google-chrome"] focus
 
-assign [class="google-chrome"] 2
-for_window [class="google-chrome"] focus
+# maybe assign in the future
+# assign [app_id="google-chrome"] 2
+# for_window [app_id="google-chrome"] focus
+#
+# assign [class="google-chrome"] 2
+# for_window [class="google-chrome"] focus
 
 # set floating (nontiling)for apps needing it:
 for_window [class="Yad" instance="yad"] floating enable
