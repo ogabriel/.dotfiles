@@ -1,10 +1,23 @@
 return {
-	{ -- auto-bullets for markdown-like filetypes
+	{
+		-- auto-bullets for markdown-like filetypes
 		"dkarter/bullets.vim",
 		config = function()
 			vim.g.bullets_delete_last_bullet_if_empty = 1
+
+			vim.g.bullets_enabled_file_types = {
+				"markdown",
+				"text",
+				"gitcommit",
+				"scratch",
+			}
 		end,
-		keys = {},
+		ft = {
+			"markdown",
+			"text",
+			"gitcommit",
+			"scratch",
+		},
 	},
 	{
 		"iamcco/markdown-preview.nvim",
