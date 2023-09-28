@@ -10,16 +10,19 @@ return {
 		require("nvim-tree").setup({
 			sort_by = "case_sensitive",
 			view = {
-				width = 30,
+				width = 40,
 			},
 			renderer = {
 				group_empty = true,
 				indent_markers = {
 					enable = true,
 				},
+				icons = {
+					git_placement = "after",
+				},
 			},
 			filters = {
-				dotfiles = true,
+				dotfiles = false,
 			},
 			actions = {
 				open_file = {
