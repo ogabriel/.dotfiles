@@ -21,6 +21,7 @@ return {
 				prompt_prefix = "🔍 ",
 				layout_strategy = "flex",
 				sorting_strategy = "ascending",
+				selection_strategy = "reset",
 				layout_config = {
 					flex = {
 						flip_columns = 120,
