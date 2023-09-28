@@ -72,5 +72,10 @@ return {
 			mode = { "v" },
 			":Telescope grep_string()<cr>",
 		},
+		{
+			"<leader>gd",
+			mode = { "n", "v" },
+			":Telescope lsp_references<CR>",
+		},
 	},
 }
