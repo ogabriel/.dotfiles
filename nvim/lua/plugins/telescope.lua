@@ -44,6 +44,23 @@ return {
 					treesitter = false,
 				},
 			},
+			vimgrep_arguments = {
+				"rg",
+				--not used
+				"--color=never",
+				--must
+				"--no-heading",
+				"--with-filename",
+				"--line-number",
+				"--column",
+				--opt
+				"--smart-case",
+				--perm
+				"--threads=2",
+			},
+			file_ignore_patterns = {
+				"node_modules",
+			},
 			extensions = {
 				fzf = {
 					fuzzy = true, -- false will only do exact matching
