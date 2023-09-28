@@ -61,17 +61,17 @@ return {
 		{
 			"<c-p>",
 			mode = { "n", "v" },
-			":Telescope find_files<CR>",
+			'<CMD>lua require("telescope.builtin").find_files()<CR>',
 		},
 		{
 			"<c-f>",
 			mode = { "n" },
-			':Telescope grep_string search=""<CR>',
+			'<CMD>lua require("telescope.builtin").grep_string({ search = "" })<CR>',
 		},
 		{
 			"<c-f>",
 			mode = { "v" },
-			":Telescope grep_string()<cr>",
+			'<CMD>lua require("telescope.builtin").grep_string()<CR>',
 		},
 		{
 			"<leader>gr",
