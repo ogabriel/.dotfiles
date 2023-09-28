@@ -1,7 +1,7 @@
 return {
 	"Wansmer/treesj",
-	dev = true,
-	dir = "~/workspace/treesj/",
+	-- dev = false,
+	-- dir = "~/workspace/treesj/",
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 	},
