@@ -23,13 +23,15 @@ return {
 				selection_strategy = "reset",
 				layout_config = {
 					flex = {
-						flip_columns = 120,
+						flip_columns = 180,
+						prompt_position = "top",
 					},
 					horizontal = {
 						prompt_position = "top",
 					},
 					vertical = {
 						prompt_position = "top",
+						mirror = true,
 					},
 				},
 				mappings = {
@@ -55,7 +57,7 @@ return {
 				"--column",
 				--opt
 				"--smart-case",
-				--perm
+				--perf
 				"--threads=2",
 			},
 			file_ignore_patterns = {
@@ -83,7 +85,7 @@ return {
 		{
 			"<c-f>",
 			mode = { "n" },
-			'<CMD>lua require("telescope.builtin").grep_string({ search = "" })<CR>',
+			'<CMD>lua require("telescope.builtin").grep_string({ word_match = "-w", only_sort_text = true, search = "" })<CR>',
 		},
 		{
 			"<c-f>",
