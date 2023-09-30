@@ -1,6 +1,7 @@
 require("sets")
 require("keymaps")
 require("legacy")
+require("autocmd")
 
 -- lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

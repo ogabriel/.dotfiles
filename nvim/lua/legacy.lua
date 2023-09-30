@@ -21,6 +21,3 @@ vim.cmd([[
     vnoremap <leader>d "_d
     vnoremap <leader>p "_dP
 ]])
-
-vim.cmd("autocmd BufEnter * set formatoptions-=cro")
-vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
