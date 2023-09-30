@@ -287,3 +287,5 @@ set -g status-position top
 
 # dynamic tab rename
 set-option -g automatic-rename-format '#{?#{||:#{==:#{b:pane_current_command},nvim},#{==:#{b:pane_current_command},zsh}},#{b:pane_current_path},#{b:pane_current_command}}'
+
+unbind C-c
