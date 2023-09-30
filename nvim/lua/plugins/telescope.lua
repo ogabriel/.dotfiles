@@ -48,17 +48,17 @@ return {
 			},
 			vimgrep_arguments = {
 				"rg",
-				--not used
 				"--color=never",
-				--must
 				"--no-heading",
 				"--with-filename",
 				"--line-number",
 				"--column",
-				--opt
+				--custom
 				"--smart-case",
-				--perf
-				"--threads=2",
+				"--threads=0",
+				"--max-columns=512",
+				"--hidden",
+				"--trim",
 			},
 			file_ignore_patterns = {
 				"node_modules",
@@ -80,7 +80,7 @@ return {
 		{
 			"<c-p>",
 			mode = { "n", "v" },
-			'<CMD>lua require("telescope.builtin").find_files()<CR>',
+			'<CMD>lua require("telescope.builtin").find_files({ hidden=true })<CR>',
 		},
 		{
 			"<c-f>",
@@ -92,6 +92,12 @@ return {
 			mode = { "v" },
 			'<CMD>lua require("telescope.builtin").grep_string()<CR>',
 		},
+		{
+			"<leader>f",
+			mode = { "n" },
+			'<CMD>lua require("telescope.builtin").live_grep()<CR>',
+		},
+
 		{
 			"<leader>gr",
 			mode = { "n", "v" },
