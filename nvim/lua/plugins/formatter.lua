@@ -28,6 +28,7 @@ return {
 				html = { require("formatter.filetypes.html").prettier },
 				sh = { require("formatter.filetypes.sh").shfmt },
 				go = { require("formatter.filetypes.go").gofmt },
+				yaml = { require("formatter.filetypes.yaml").yamlfmt },
 				sql = {
 					function()
 						return {
