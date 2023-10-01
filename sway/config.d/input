@@ -18,7 +18,7 @@ bindsym Mod4+Space exec swaymsg input type:keyboard xkb_switch_layout next
 bindsym Mod4+Shift+Space exec swaymsg input type:keyboard xkb_switch_layout prev
 
 # https://wiki.archlinux.org/title/Xorg/Keyboard_configuration
-# layout_model(layout_variant)
+# layout(variant)
 input type:keyboard {
     xkb_layout us(altgr-intl),us,br
 }
