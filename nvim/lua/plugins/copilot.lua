@@ -6,6 +6,7 @@ return {
 
 		vim.g.copilot_filetypes = {
 			["go"] = false,
+			["yaml"] = true,
 			["markdown"] = false,
 		}
 	end,
