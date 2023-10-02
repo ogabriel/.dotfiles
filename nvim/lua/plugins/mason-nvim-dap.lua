@@ -12,7 +12,7 @@ return {
 				"delve",
 			},
 			automatic_installation = true,
-            --only use mason-nvim-dap to install things
+			--only use mason-nvim-dap to install things
 			handlers = nil,
 		})
 	end,
