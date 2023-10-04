@@ -20,6 +20,8 @@ return {
 				"elixir",
 				"heex",
 				"eex",
+				"heex",
+				"eex",
 				"ruby",
 				"javascript",
 				"html",
@@ -27,7 +29,7 @@ return {
 				"csv",
 				"yaml",
 				"dockerfile",
-				"surface",
+				"json",
 			},
 			sync_install = false,
 			highlight = {
