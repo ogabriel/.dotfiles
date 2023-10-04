@@ -73,7 +73,6 @@ ZSH_THEME="robbyrussell"
 plugins=(
 	aliases
 	tmux
-	zsh-vi-mode
 	timer
 	# search
 	fzf
@@ -87,10 +86,6 @@ plugins=(
 	gcloud
 	kubectl
 	docker
-	# zsh
-	zsh-autosuggestions
-	zsh-completions
-	zsh-syntax-highlighting
 )
 
 # link to docs: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
@@ -133,7 +128,12 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 zinit ice lucid wait'0'
+
 zinit light joshskidmore/zsh-fzf-history-search
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
 
 ##### ALIAS #####
 alias v="vim ."
