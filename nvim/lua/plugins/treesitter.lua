@@ -26,7 +26,6 @@ return {
 				"javascript",
 				"html",
 				"css",
-				"csv",
 				"yaml",
 				"dockerfile",
 				"json",
