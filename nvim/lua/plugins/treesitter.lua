@@ -30,6 +30,7 @@ return {
 				"dockerfile",
 				"json",
 			},
+			ignore_install = { "help" },
 			sync_install = false,
 			highlight = {
 				enable = true,
