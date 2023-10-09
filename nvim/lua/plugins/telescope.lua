@@ -43,7 +43,13 @@ return {
 				},
 				preview = {
 					timeout = 100,
-					treesitter = false,
+					treesitter = {
+						disable = {
+							"javascript",
+							"css",
+							"scss",
+						},
+					},
 				},
 			},
 			vimgrep_arguments = {
