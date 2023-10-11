@@ -1,6 +1,7 @@
-vim.api.nvim_create_autocmd({ "InsertLeavePre" }, {
+vim.api.nvim_create_autocmd({ "InsertLeave", "FocusLost" }, {
 	callback = function()
-		vim.cmd("update")
+		vim.cmd("silent! update")
+		vim.cmd("silent! FormatWrite")
 	end,
 })
 
