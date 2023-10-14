@@ -10,6 +10,7 @@ return {
 			"gopls",
 			"lua_ls",
 			"rust_analyzer",
+			"solargraph",
 		},
 	},
 }
