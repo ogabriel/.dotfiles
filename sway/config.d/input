@@ -19,6 +19,7 @@ bindsym Mod4+Shift+Space exec swaymsg input type:keyboard xkb_switch_layout prev
 
 # https://wiki.archlinux.org/title/Xorg/Keyboard_configuration
 # layout(variant)
+
 input type:keyboard {
     xkb_layout us(altgr-intl),us,br
 }
@@ -36,15 +37,16 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 # Touchpad
 input "2:7:SynPS/2_Synaptics_TouchPad" {
     tap enabled
-    scroll_factor 0.3
-    natural_scroll enabled
+    scroll_factor 0.2
     accel_profile "flat"
+    natural_scroll disabled
     pointer_accel 0.7
 }
 
 input "2:10:TPPS/2_Elan_TrackPoint" {
-    scroll_factor 0.3
+    scroll_factor 0.2
     accel_profile "flat"
+    natural_scroll disabled
     pointer_accel 0.1
 }
 
