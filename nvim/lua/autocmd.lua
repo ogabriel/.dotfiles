@@ -1,7 +1,6 @@
 vim.api.nvim_create_autocmd({ "InsertLeave", "FocusLost" }, {
 	callback = function()
 		vim.cmd("silent! update")
-		vim.cmd("silent! FormatWrite")
 	end,
 })
 
