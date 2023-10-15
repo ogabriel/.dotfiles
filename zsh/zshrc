@@ -93,6 +93,7 @@ plugins=(
 	gcloud
 	kubectl
 	docker
+    docker-compose
 )
 
 # link to docs: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
