@@ -28,7 +28,18 @@ return {
 				html = { require("formatter.filetypes.html").prettier },
 				sh = { require("formatter.filetypes.sh").shfmt },
 				go = { require("formatter.filetypes.go").gofmt },
-				yaml = { require("formatter.filetypes.yaml").yamlfmt },
+				yaml = {
+					function()
+						return {
+							exe = "yamlfmt",
+							args = {
+								"-in",
+								"-formatter indentless_arrays=true,retain_line_breaks=true,max_line_length=120,drop_merge_tag=true",
+							},
+							stdin = true,
+						}
+					end,
+				},
 				sql = {
 					function()
 						return {
