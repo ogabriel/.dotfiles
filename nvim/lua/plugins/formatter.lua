@@ -6,7 +6,7 @@ return {
 		local group = vim.api.nvim_create_augroup("FormatAutogroup", { clear = true })
 
 		vim.api.nvim_create_autocmd("BufWritePost", {
-			command = "FormatWrite",
+			command = "silent! FormatWrite",
 			group = group,
 		})
 
