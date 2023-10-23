@@ -1,3 +1,2 @@
 exec swaymsg "workspace 1; exec alacritty;"
-exec swaymsg "workspace 10; exec obsidian; exec sleep 1;"
 exec swaymsg "workspace 4; exec google-chrome-stable;"
