@@ -63,12 +63,13 @@ return {
 				"--smart-case",
 				"--threads=0",
 				"--max-columns=512",
-				"--hidden",
 				"--trim",
 			},
-			file_ignore_patterns = {
-				"node_modules",
-			},
+			-- file_ignore_patterns = {
+			-- 	"node_modules",
+			-- 	".git/",
+			-- 	"_build",
+			-- },
 			extensions = {
 				fzf = {
 					fuzzy = true, -- false will only do exact matching
@@ -86,7 +87,8 @@ return {
 		{
 			"<c-p>",
 			mode = { "n", "v" },
-			'<CMD>lua require("telescope.builtin").find_files({ hidden=true })<CR>',
+			-- '<CMD>lua require("telescope.builtin").find_files({ hidden=true })<CR>',
+			'<CMD>lua require("telescope.builtin").find_files()<CR>',
 		},
 		{
 			"<c-f>",
