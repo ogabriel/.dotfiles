@@ -8,6 +8,8 @@ configuration {
     display-filebrowser:        " Files";
     display-window:             " Windows";
     terminal: "alacritty";
+    me-select-entry: "MousePrimary";
+    me-accept-entry: "!MousePrimary";
 /*	font: "mono 12";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
