@@ -1,15 +1,11 @@
 [
     {
         "name": "primary",
-        "layer": "top",
+        "layer": "bottom",
         "position": "top",
         "output": ["DP-1", "eDP-1"],
-        // If height property would be not present, it'd be calculated dynamically
-        "height": 30,
-
         "modules-left": [
-            "custom/launcher",
-            "sway/workspaces",
+            "custom/launcher", "sway/workspaces",
             "sway/mode",
         ],
 
@@ -247,13 +243,9 @@
     },
     {
         "name": "secondary",
-        "layer": "top",
+        "layer": "bottom",
         "position": "top",
         "output": ["!DP-1", "!eDP-1", "*"],
-
-        // If height property would be not present, it'd be calculated dynamically
-        "height": 30,
-
         "modules-left": [
             "custom/launcher",
             "sway/workspaces",
