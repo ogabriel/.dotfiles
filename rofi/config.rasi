@@ -1,16 +1,12 @@
 /* general configs */
 configuration {
-	modes: "drun,window,filebrowser,power:/home/gabriel/.config/rofi/power-menu.sh,audio:/home/gabriel/.config/rofi/audio-menu.sh,displays:/home/gabriel/.config/rofi/display-menu.sh,clipboard:greenclip print,run,ssh";
+	modes: "window,filebrowser,drun,power:/home/gabriel/.config/rofi/power-menu.sh,audio:/home/gabriel/.config/rofi/audio-menu.sh,displays:/home/gabriel/.config/rofi/display-menu.sh,clipboard:greenclip print,run,ssh";
 	combi-modes: "clipboard:greenclip print,drun,window";
     show-icons: true;
-    display-drun:               " Apps";
-    display-run:                " Run";
-    display-filebrowser:        " Files";
-    display-window:             " Windows";
     terminal: "alacritty";
     me-select-entry: "MousePrimary";
     me-accept-entry: "!MousePrimary";
-/*	font: "mono 12";*/
+	font: "monospace 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -65,9 +61,10 @@ configuration {
 /*	refilter-timeout-limit: 300;*/
 /*	xserver-i300-workaround: false;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
-	display-drun: "Applications";
-/*	display-window: ;*/
-	display-run: "Run from terminal";
+    display-drun:               " Apps";
+    display-run:                " Run";
+    display-filebrowser:        " Files";
+    display-window:             " Windows";
 /*	display-ssh: ;*/
 /*	display-combi: ;*/
 /*	display-keys: ;*/
