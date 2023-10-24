@@ -46,12 +46,13 @@
         "on-click": "exec xfce4-terminal",
         "tooltip": false
     },
-    // to use the weather module replace <your_location> with your city or town
-    // note: do not use spaces: new york would be newyork
+    // https://github.com/bjesus/wttrbar
     "custom/weather": {
-        "exec": "~/.config/waybar/scripts/weather.sh São Paulo",
-        "return-type": "json",
-        "interval": 600,
+        "format": "{} °",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar --location 'São Paulo'",
+        "return-type": "json"
     },
     "custom/keyboard-layout": {
         "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
