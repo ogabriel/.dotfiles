@@ -1,0 +1,56 @@
+{
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/power": {
+        "format":" ⏻ ",
+        "on-click": "exec rofi -show power",
+        "tooltip": false,
+    },
+    "custom/launcher": {
+        "format":"  ",
+        "on-click": "exec rofi -show drun",
+        "tooltip": false,
+    },
+    "custom/files": {
+        "format": "  ",
+        "on-click": "exec thunar",
+        "tooltip": false
+    },
+    "custom/firefox": {
+        "format": " ",
+        "on-click": "exec firefox",
+        "tooltip": false
+    },
+    "custom/terminal": {
+        "format": " ",
+        "on-click": "exec xfce4-terminal",
+        "tooltip": false
+    },
+    // to use the weather module replace <your_location> with your city or town
+    // note: do not use spaces: new york would be newyork
+    "custom/weather": {
+        "exec": "~/.config/waybar/scripts/weather.sh São Paulo",
+        "return-type": "json",
+        "interval": 600,
+    },
+    "custom/keyboard-layout": {
+        "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+        // Interval set only as a fallback, as the value is updated by signal
+        "interval": 30,
+        "format": "  {}", // Icon: keyboard
+        // Signal sent by Sway key binding (~/.config/sway/key-bindings)
+        "signal": 1, // SIGHUP
+        "tooltip": false,
+        "on-click": "~/.config/waybar/scripts/keyhint.sh",
+    },
+}

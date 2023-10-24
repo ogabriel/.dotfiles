@@ -1,0 +1,103 @@
+{
+    "clock": {
+        "interval": 10,
+        "format-alt": " {:%e %b %Y}", // Icon: calendar-alt
+        "format": "{:%H:%M  %e %b %Y}",
+        "tooltip-format": "{:%e %B %Y}"
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󱡒",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%",
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "custom/audio_idle_inhibitor": {
+        "format": "{icon}",
+        "exec": "sway-audio-idle-inhibit --dry-print-both-waybar",
+        "exec-if": "which sway-audio-idle-inhibit",
+        "return-type": "json",
+        "format-icons": {
+            "output": "  ",
+            "input": "  ",
+            "output-input": "  ",
+            "none": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 18,
+        "spacing":10,
+    },
+    "network": {
+        "interval": 5,
+        "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
+        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-disconnected": "⚠  Disconnected",
+        "format-linked": "{ifname} (No IP) ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "alacritty -e 'nmtui'",
+    },
+    "network#vpn": {
+        "interface": "tun0",
+        "format": "  {essid} ({signalStrength}%)",
+        "format-disconnected": "⚠  Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+}
