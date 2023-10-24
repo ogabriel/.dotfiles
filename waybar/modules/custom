@@ -11,14 +11,24 @@
         "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
+    "custom/launcher": {
+        "format":"  ",
+        "on-click": "exec rofi -show drun",
+        "tooltip": false,
+    },
     "custom/power": {
         "format":" ⏻ ",
         "on-click": "exec rofi -show power",
         "tooltip": false,
     },
-    "custom/launcher": {
-        "format":"  ",
-        "on-click": "exec rofi -show drun",
+    "custom/display": {
+        "format":" 󱋆 ",
+        "on-click": "exec rofi -show displays",
+        "tooltip": false,
+    },
+    "custom/audio": {
+        "format":"  ",
+        "on-click": "exec rofi -show audio",
         "tooltip": false,
     },
     "custom/files": {
