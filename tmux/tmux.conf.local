@@ -24,7 +24,7 @@ tmux_conf_new_session_prompt=false
 
 # map configurations for Xresources
 custom_black="colour0"
-custom_white="colour6"
+custom_white="colour15"
 custom_red="colour2"
 custom_green="colour3"
 custom_yellow="colour4"

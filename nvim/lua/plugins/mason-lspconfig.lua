@@ -1,16 +1,17 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
-	config = function(opts)
+	lazy = false,
+	config = function()
 		require("mason").setup()
-		require("mason-lspconfig").setup(opts)
+		require("mason-lspconfig").setup({
+			ensure_installed = {
+				"clangd",
+				"elixirls",
+				"gopls",
+				"lua_ls",
+				"rust_analyzer",
+				"solargraph",
+			},
+		})
 	end,
-	opts = {
-		ensure_installed = {
-			"elixirls",
-			"gopls",
-			"lua_ls",
-			"rust_analyzer",
-			"solargraph",
-		},
-	},
 }

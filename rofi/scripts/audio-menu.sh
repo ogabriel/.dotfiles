@@ -20,7 +20,7 @@ if [ "$@" ]; then
         notify-send -t 2000 -r 2 -u critical "Error activating $desc"
     fi
 else
-    echo -en "\x00prompt\x1fSelect Output\n"
+    echo -en "\x00prompt\x1fAudio\n"
     # Get the list of outputs based on the description, which is what makes sense to a human
     # and is what we want to show in the menu
     for x in $(pactl list sinks | grep -ie "description:" | cut -d: -f2 | sort); do

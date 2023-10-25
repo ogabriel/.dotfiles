@@ -20,8 +20,9 @@
     selected-urgent-background: {color3};
     selected-urgent-foreground: @foreground;
 
-    background-color: #{background.strip}A1;
+    background-color: @background;
     background: {background};
+    background-transparent: #{background.strip}CC;
     foreground: {foreground};
     border-color: @background;
     spacing: 2;
