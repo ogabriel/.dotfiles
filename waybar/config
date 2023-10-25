@@ -11,18 +11,18 @@
             "~/.config/waybar/modules/custom",
         ],
         "modules-left": [
-            "sway/workspaces",
-            "sway/mode",
-            "keyboard-state",
-        ],
-        "modules-center": [
-            "custom/media",
             "cpu",
             "memory",
             "temperature",
             "battery",
             "custom/gpu-usage",
             "custom/weather",
+            "keyboard-state",
+            "custom/media",
+        ],
+        "modules-center": [
+            "sway/workspaces",
+            "sway/mode",
         ],
         "modules-right": [
             "network",
@@ -51,15 +51,15 @@
             "~/.config/waybar/modules/custom",
         ],
         "modules-left": [
-            "sway/workspaces",
-            "sway/mode",
-        ],
-        "modules-center": [
             "cpu",
             "memory",
             "temperature",
             "battery",
             "custom/gpu-usage",
+        ],
+        "modules-center": [
+            "sway/workspaces",
+            "sway/mode",
         ],
         "modules-right": [
             "pulseaudio",
