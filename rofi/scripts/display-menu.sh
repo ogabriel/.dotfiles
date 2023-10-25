@@ -24,7 +24,7 @@ if [ "$@" ]; then
         fi
     fi
 else
-    echo -en "\x00prompt\x1fSelect display\n"
+    echo -en "\x00prompt\x1fDisplay\n"
     for x in $(swaymsg -t get_outputs | jq -r '. | map(.name) | join("\n")' | sort -r); do
         echo "$x disable" | xargs
         echo "$x enable" | xargs
