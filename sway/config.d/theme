@@ -6,13 +6,15 @@ gaps inner 2
 gaps outer 0
 
 # Hide titlebar on windows:
-default_border pixel 1
+default_border pixel 3
+default_floating_border pixel 3
+
+# only show border and gaps when needed
+smart_borders on
+smart_gaps on
 
 # Default Font
-font pango:Noto Sans Regular 10
-
-# Thin borders:
-smart_borders on
+font pango:JetBrains Mono Regular 10
 
 # include pywal colors
 include "$HOME/.cache/wal/colors-sway"
