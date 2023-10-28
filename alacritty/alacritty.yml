@@ -6,7 +6,7 @@ shell:
   args:
   - -l
   - -c
-  - "source ~/.zshrc; tmux"
+  - "source ~/.zshrc; tmux-smart"
 
 font:
   normal:
