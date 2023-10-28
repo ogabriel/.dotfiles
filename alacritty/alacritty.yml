@@ -4,9 +4,9 @@ env:
 shell:
   program: /bin/zsh
   args:
-    - -l
-    - -c
-    - "(cat ~/.cache/wal/sequences &) && tmux"
+  - -l
+  - -c
+  - "source ~/.zshrc; tmux"
 
 font:
   normal:
