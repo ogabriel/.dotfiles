@@ -22,20 +22,20 @@ include "$HOME/.cache/wal/colors-sway"
 # Set wallpaper:
 output "*" bg $wallpaper fill
 
+# set pywal colors
+# client                    border      background text      indicator child_border
+client.focused              $color3     $color2    $color1   $color2   $color2
+client.focused_inactive     $background $color3    $color1   $color3   $color3
+client.focused_tab_title    $background $color3    $color1   $color3   $color3
+client.unfocused            $background $color0    $color0   $color0   $color0
+client.urgent               $color15    $color15   $color7   $color15  $color15
+client.background           $background
+
 # Title format for windows
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"
 for_window [shell="x_wayland"] title_format "%class - %title"
 
-client.focused          $color2   $color2   $color1   $color2   $color2
-client.focused_inactive $color3   $color3   $color1   $color3   $color3
-client.unfocused        $color0   $color0   $color0   $color0   $color0
-client.urgent           $color15  $color15  $color7   $color15  $color15
-client.placeholder      $color3   $color3   $color7   $color3   $color3
-client.background       $background
-
-#
 # Status Bar:
-#
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     swaybar_command waybar
