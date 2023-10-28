@@ -62,6 +62,12 @@ input "13652:62723:Compx_VGN_Mouse_2.4G_Receiver" {
     pointer_accel -0.5
 }
 
+# dragonfly USB
+input "13652:62726:compx_VGN_F1_MOBA" {
+    accel_profile "flat"
+    pointer_accel -0.5
+}
+
 # this breaks things
 # exec_always {
 #     'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
