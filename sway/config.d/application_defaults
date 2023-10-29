@@ -43,3 +43,6 @@ for_window [app_id="firefox"] inhibit_idle fullscreen
 for_window [app_id="google-chrome"] inhibit_idle fullscreen
 
 for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
+
+for_window [class="^obsidian$"] move container to workspace 10
+for_window [app_id="^obsidian$"] move container to workspace 10
