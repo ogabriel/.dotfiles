@@ -149,6 +149,7 @@ alias v="vim ."
 alias sv="sudo vim"
 alias nv="nvim"
 alias :q="exit"
+alias:q="exit"
 
 alias ll='ls -alF'
 alias la='ls -A'
