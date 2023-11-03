@@ -149,6 +149,7 @@ alias v="vim ."
 alias sv="sudo vim"
 alias nv="nvim"
 alias :q="exit"
+alias q="exit"
 
 alias ll='ls -alF'
 alias la='ls -A'
@@ -166,6 +167,8 @@ alias mps="mix phx.server"
 alias mc="mix do deps.compile, compile"
 alias mcc="rm -rf _build && mix do clean, deps.compile, compile"
 alias mips="iex -S mix phx.server"
+
+export TIMEFMT=$'\nreal \t%E\nuser \t%U\nsys \t%S\n'
 
 ##### SCRIPTS #####
 export PATH=$PATH:${HOME}/.local/bin/:$HOME/bin:$HOME/.scripts:$HOME/.docker_scripts:$HOME/.hidden_scripts
