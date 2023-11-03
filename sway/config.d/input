@@ -40,7 +40,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     scroll_factor 0.2
     accel_profile "flat"
     natural_scroll disabled
-    pointer_accel 0.7
+    pointer_accel 0.1
 }
 
 input "2:10:TPPS/2_Elan_TrackPoint" {
