@@ -1,6 +1,6 @@
 /* general configs */
 configuration {
-	modes: "power:/home/gabriel/.config/rofi/scripts/power-menu.sh,drun,displays:/home/gabriel/.config/rofi/scripts/display-menu.sh,audio:/home/gabriel/.config/rofi/scripts/audio-menu.sh,clipboard:greenclip print,window,filebrowser,run,ssh";
+	modes: "power:/home/gabriel/.config/rofi/scripts/power-menu.sh,drun,displays:/home/gabriel/.config/rofi/scripts/display-menu.sh,audio:/home/gabriel/.config/rofi/scripts/audio-menu.sh,filebrowser";
 	combi-modes: "clipboard:greenclip print,drun,window";
     show-icons: true;
     terminal: "alacritty";
