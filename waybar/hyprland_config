@@ -25,6 +25,10 @@
             "hyprland/mode",
         ],
         "modules-right": [
+            "custom/display",
+            "custom/audio",
+            "custom/power",
+            "custom/launcher",
             "network",
             "idle_inhibitor",
             "custom/audio_idle_inhibitor",
@@ -32,11 +36,6 @@
             "backlight",
             "clock",
             "tray",
-            "custom/display",
-            "custom/audio",
-            "custom/power",
-            "custom/launcher",
-
         ],
     },
     {
