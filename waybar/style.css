@@ -58,7 +58,13 @@ window#waybar.hidden {
     border-radius: 3;
 }
 
+/* sway */
 #workspaces button.focused {
+    background-color: @color4;
+}
+
+/* hyprland */
+#workspaces button.active {
     background-color: @color4;
 }
 
