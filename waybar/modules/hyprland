@@ -1,0 +1,31 @@
+{
+    "hyprland/workspaces": {
+        "format": "<sub>{icon}</sub>\n{windows}",
+        "format-window-separator": "\n",
+        "window-rewrite-default": "",
+        "window-rewrite": {
+        "firefox": "",
+            "foot": "",
+            "code": "󰨞",
+        },
+    },
+    "hyprland/window": {
+        "format": "👉 {}",
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "🌎 $1",
+            "(.*) - fish": "> [$1]"
+        },
+        "separate-outputs": true
+    },
+    "hyprland/language": {
+        "format": "Lang: {}",
+        "format-en": "AMERICA, HELL YEAH!",
+        "format-tr": "As bayrakları",
+        "keyboard-name": "at-translated-set-2-keyboard"
+    },
+    "hyprland/submap": {
+        "format": "✌️ {}",
+        "max-length": 8,
+        "tooltip": false
+    },
+}
