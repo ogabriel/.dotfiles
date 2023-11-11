@@ -1,7 +1,7 @@
 [
     {
         "name": "primary",
-        "layer": "bottom",
+        "layer": "top",
         "position": "top",
         "output": ["DP-1", "eDP-1"],
         "include": [
@@ -41,7 +41,7 @@
     },
     {
         "name": "secondary",
-        "layer": "bottom",
+        "layer": "top",
         "position": "top",
         "output": ["!DP-1", "!eDP-1", "*"],
         "include": [
