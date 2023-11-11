@@ -3,11 +3,13 @@
         "format": "{icon} - {windows}",
         "window-rewrite-default": "",
         "window-rewrite": {
-            "firefox": "",
+            "firefox": "󰈹",
+            "chrome": "",
             "foot": "",
             "kitty": "",
             "alacritty": "",
             "code": "󰨞",
+            "obsidian": "󱓧"
         },
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
