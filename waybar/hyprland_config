@@ -1,0 +1,69 @@
+[
+    {
+        "name": "primary",
+        "layer": "bottom",
+        "position": "top",
+        "output": ["DP-1", "eDP-1"],
+        "include": [
+            "~/.config/waybar/modules/hyprland",
+            "~/.config/waybar/modules/monitor",
+            "~/.config/waybar/modules/general",
+            "~/.config/waybar/modules/custom",
+        ],
+        "modules-left": [
+            "cpu",
+            "memory",
+            "temperature",
+            "battery",
+            "custom/gpu-usage",
+            "custom/weather",
+            "keyboard-state",
+            "custom/media",
+        ],
+        "modules-center": [
+            "hyprland/workspaces",
+            "hyprland/mode",
+        ],
+        "modules-right": [
+            "network",
+            "idle_inhibitor",
+            "custom/audio_idle_inhibitor",
+            "pulseaudio",
+            "backlight",
+            "clock",
+            "tray",
+            "custom/display",
+            "custom/audio",
+            "custom/power",
+            "custom/launcher",
+
+        ],
+    },
+    {
+        "name": "secondary",
+        "layer": "bottom",
+        "position": "top",
+        "output": ["!DP-1", "!eDP-1", "*"],
+        "include": [
+            "~/.config/waybar/modules/hyprland",
+            "~/.config/waybar/modules/monitor",
+            "~/.config/waybar/modules/general",
+            "~/.config/waybar/modules/custom",
+        ],
+        "modules-left": [
+            "cpu",
+            "memory",
+            "temperature",
+            "battery",
+            "custom/gpu-usage",
+        ],
+        "modules-center": [
+            "hyprland/workspaces",
+            "hyprland/mode",
+        ],
+        "modules-right": [
+            "pulseaudio",
+            "clock",
+        ],
+    }
+]
