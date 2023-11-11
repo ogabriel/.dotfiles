@@ -1,13 +1,11 @@
-# Initial Setup
-# exec ~/set_once.sh
+# sway
+include $HOME/.config/sway/config.d/theme
+include $HOME/.config/sway/config.d/clamshell
+include $HOME/.config/sway/config.d/bindsym
+include $HOME/.config/sway/config.d/input
+include $HOME/.config/sway/config.d/output
 
-# Config for sway
-#
-# Read `man 5 sway` for a complete reference.
-
-# user config directory
-include $HOME/.config/sway/config.d/*
-
-# only enable this if every app you use is compatible with wayland
-# xwayland disable
-include $HOME/.config/sway/autostart
+# user
+include $HOME/.config/sway/config.d/exec
+include $HOME/.config/sway/config.d/window_rules
+include $HOME/.config/sway/config.d/autostart
