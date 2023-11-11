@@ -19,9 +19,13 @@ return {
 		"tpope/vim-fugitive",
 		lazy = false,
 		config = function()
-			vim.cmd("command! Gdelete GDelete")
-			vim.cmd("command! Gmove GMove")
-			vim.cmd("command! Grename GRename")
+			vim.cmd.delcommand("Gdelete")
+			vim.cmd.delcommand("Gmove")
+			vim.cmd.delcommand("Grename")
+
+			vim.cmd("cnoreabbrev Gdelete GDelete")
+			vim.cmd("cnoreabbrev Gmove GMove")
+			vim.cmd("cnoreabbrev Grename GRename")
 		end,
 		keys = {
 			{ "<leader>gs", ":Git<cr>" },
