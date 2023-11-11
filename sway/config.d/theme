@@ -19,9 +19,6 @@ font pango:JetBrains Mono Regular 10
 # include pywal colors
 include "$HOME/.cache/wal/colors-sway"
 
-# Set wallpaper:
-output "*" bg $wallpaper fill
-
 # set pywal colors
 # client                    border      background text      indicator child_border
 client.focused              $color3     $color2    $color1   $color2   $color2
