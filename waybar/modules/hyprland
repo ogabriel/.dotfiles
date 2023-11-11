@@ -1,7 +1,6 @@
 {
     "hyprland/workspaces": {
-        "format": "<sub>{icon}</sub>{windows}",
-        "format-window-separator": " ",
+        "format": "{icon} - {windows}",
         "window-rewrite-default": "",
         "window-rewrite": {
             "firefox": "",
