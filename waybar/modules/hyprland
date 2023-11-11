@@ -1,13 +1,17 @@
 {
     "hyprland/workspaces": {
-        "format": "<sub>{icon}</sub>\n{windows}",
-        "format-window-separator": "\n",
+        "format": "<sub>{icon}</sub>{windows}",
+        "format-window-separator": " ",
         "window-rewrite-default": "",
         "window-rewrite": {
-        "firefox": "",
+            "firefox": "",
             "foot": "",
+            "kitty": "",
+            "alacritty": "",
             "code": "󰨞",
         },
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "hyprland/window": {
         "format": "👉 {}",
@@ -15,6 +19,7 @@
             "(.*) — Mozilla Firefox": "🌎 $1",
             "(.*) - fish": "> [$1]"
         },
+        "max-length": 200,
         "separate-outputs": true
     },
     "hyprland/language": {
