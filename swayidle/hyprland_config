@@ -1,4 +1,4 @@
-timeout 10 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
-timeout 20 'swaylock'
-timeout 30 'systemctl suspend'
-before-sleep 'swaylock'
+timeout 10 'brightnessctl -s s 0%' resume 'brightnessctl -r'
+timeout 20 'playerctl -s pause; hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on && brightnessctl -r'
+timeout 30 'swaylock'
+timeout 40 'systemctl suspend'
