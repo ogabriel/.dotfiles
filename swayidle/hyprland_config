@@ -1,7 +1,7 @@
 timeout 10 'brightnessctl -c backlight set 50%-' resume 'brightnessctl -c backlight set +50%'
 timeout 20 'playerctl pause'
 timeout 30 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
-timeout 40 'swaylock -f -i $HOME/.cache/wal/wallpaper --ignore-empty-password' resume 'hyprctl dispatch dpms on'
+timeout 40 'swaylock -f -i $HOME/.cache/wal/wallpaper --ignore-empty-password'
 timeout 50 'systemctl suspend'
 before-sleep 'swaylock -f -i $HOME/.cache/wal/wallpaper --ignore-empty-password'
 after-resume 'hyprctl dispatch dpms on'
