@@ -1,0 +1,9 @@
+daemonize
+indicator-caps-lock
+ignore-empty-password
+image=$HOME/.cache/wal/wallpaper
+scaling=fill
+font-size=20
+
+# style
+indicator-radius=150
