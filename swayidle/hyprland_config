@@ -1,6 +1,6 @@
 timeout 10 'playerctl pause'
-timeout 20 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on"'
-timeout 30 'swaylock -f -i $HOME/.cache/wal/wallpaper --ignore-empty-password' resume 'hyprctl dispatch dpms on"'
+timeout 20 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+timeout 30 'swaylock -f -i $HOME/.cache/wal/wallpaper --ignore-empty-password' resume 'hyprctl dispatch dpms on'
 timeout 40 'systemctl suspend'
 timeout 50 'systemctl hibernate'
 before-sleep 'swaylock -f -i $HOME/.cache/wal/wallpaper --ignore-empty-password'
