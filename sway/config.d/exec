@@ -5,6 +5,7 @@ exec mako # notification daemon
 exec swww init # wallpaper
 exec nm-applet --indicator # network manager
 exec blueman-applet # bluetooth
+exec gammastep-indicator
 
 # GTK3 applications take a long time to start
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
