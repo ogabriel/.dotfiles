@@ -19,20 +19,6 @@ set $mic_mute $(pactl set-source-mute @DEFAULT_SOURCE@ toggle && pactl get-sourc
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 
-### Idle configuration
-#prevent enter idlen when audio is on
-exec sway-audio-idle-inhibit
-
-exec swayidle -w\
-    timeout 600 'swaylock -f -C ~/.config/swaylock/config'\
-    timeout 60 'swaymsg "output * power off"' \
-    resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock -C ~/.config/swaylock/config'
-
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
 ## Lock Screen
     bindsym $mod+f1 exec ~/.config/sway/scripts/lockman.sh
 
@@ -205,7 +191,7 @@ bindsym $mod+r mode "resize"
 #
 # Player
 #
-    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioPlay exec playerctl play
     bindsym XF86AudioPause exec playerctl pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous

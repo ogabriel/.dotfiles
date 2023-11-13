@@ -7,6 +7,9 @@ exec nm-applet --indicator # network manager
 exec blueman-applet # bluetooth
 exec gammastep-indicator
 
+exec sway-audio-idle-inhibit # prevent enter idlen when audio is on
+exec swayidle
+
 # GTK3 applications take a long time to start
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
