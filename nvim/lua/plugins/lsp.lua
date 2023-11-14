@@ -52,6 +52,18 @@ return {
 		local cmp = require("cmp")
 		local cmp_action = require("lsp-zero").cmp_action()
 
+		vim.diagnostic.config({
+			virtual_text = false,
+			signs = true,
+			underline = true,
+			update_in_insert = true,
+			severity_sort = true,
+		})
+
+		-- Show line diagnostics automatically in hover window
+		-- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+		vim.cmd([[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]])
+
 		cmp.setup({
 			mapping = {
 				-- Ctrl+Space to trigger completion menu
