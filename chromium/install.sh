@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ln chrome-flags.conf $HOME/.config/chrome-flags.conf
+ln ~/.dotfiles/chromium/chrome-flags.conf ~/.config/chrome-flags.conf
