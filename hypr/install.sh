@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -d ~/.config/sway ]; then
+if [ -d ~/.config/hypr ]; then
     mv ~/.config/hypr ~/.config/hypr.bak
 fi
 
