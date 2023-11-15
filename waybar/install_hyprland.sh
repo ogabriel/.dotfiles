@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [ -d ~/.config/waybar ]; then
+    rm -rf ~/.config/waybar.bak
     mv ~/.config/waybar ~/.config/waybar.bak
 fi
 
