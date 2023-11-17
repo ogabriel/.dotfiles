@@ -80,7 +80,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
 	aliases
 	tmux
-	timer
+	# timer
 	# search
 	fzf
 	ag
