@@ -8,7 +8,7 @@ zmodule ohmyzsh/ohmyzsh --root plugins/git-auto-fetch
 zmodule ohmyzsh/ohmyzsh --root plugins/gitfast
 zmodule ohmyzsh/ohmyzsh --root plugins/gcloud
 zmodule ohmyzsh/ohmyzsh --root plugins/kubectl
-zmodule ohmyzsh/ohmyzsh --root plugins/docker
+zmodule ohmyzsh/ohmyzsh --root plugins/docker --fpath completions
 zmodule ohmyzsh/ohmyzsh --root plugins/docker-compose
 
 zmodule joshskidmore/zsh-fzf-history-search
