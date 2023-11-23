@@ -1,0 +1,20 @@
+zmodule ohmyzsh/ohmyzsh --root plugins/aliases
+zmodule ohmyzsh/ohmyzsh --root plugins/tmux
+zmodule ohmyzsh/ohmyzsh --root plugins/fzf
+zmodule ohmyzsh/ohmyzsh --root plugins/ag
+zmodule ohmyzsh/ohmyzsh --root plugins/asdf
+zmodule ohmyzsh/ohmyzsh --root plugins/git
+zmodule ohmyzsh/ohmyzsh --root plugins/git-auto-fetch
+zmodule ohmyzsh/ohmyzsh --root plugins/gitfast
+zmodule ohmyzsh/ohmyzsh --root plugins/gcloud
+zmodule ohmyzsh/ohmyzsh --root plugins/kubectl
+zmodule ohmyzsh/ohmyzsh --root plugins/docker
+zmodule ohmyzsh/ohmyzsh --root plugins/docker-compose
+
+zmodule joshskidmore/zsh-fzf-history-search
+zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-completions
+zmodule zdharma/fast-syntax-highlighting
+zmodule jeffreytse/zsh-vi-mode
+
+zmodule sindresorhus/pure --source async.zsh --source pure.zsh
