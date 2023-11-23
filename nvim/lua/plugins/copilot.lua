@@ -5,9 +5,10 @@ return {
 		vim.g.copilot_no_tab_map = true
 
 		vim.g.copilot_filetypes = {
-			["go"] = false,
+			-- ["go"] = false,
 			["yaml"] = true,
 			["markdown"] = false,
+			[""] = true,
 		}
 	end,
 }
