@@ -16,7 +16,7 @@ zmodule ohmyzsh/ohmyzsh --root plugins/docker-compose
 
 zmodule joshskidmore/zsh-fzf-history-search
 zmodule zsh-users/zsh-autosuggestions
-zmodule zsh-users/zsh-completions
+zmodule zsh-users/zsh-completions --fpath src
 zmodule zdharma/fast-syntax-highlighting
 zmodule jeffreytse/zsh-vi-mode
 
