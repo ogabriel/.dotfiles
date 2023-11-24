@@ -24,11 +24,6 @@ alias nv="nvim"
 alias :q="exit"
 alias q="exit"
 
-# files
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Ruby/Rails
 alias s="bundle exec rails server"
 alias c="bundle exec rails console"
