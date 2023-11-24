@@ -1,5 +1,6 @@
 zmodule ohmyzsh/ohmyzsh --source lib/history.zsh
 
+zmodule completion
 zmodule ohmyzsh/ohmyzsh --root plugins/aliases
 zmodule ohmyzsh/ohmyzsh --root plugins/tmux
 zmodule ohmyzsh/ohmyzsh --root plugins/fzf
