@@ -2,7 +2,11 @@ env:
   TERM: xterm-256color
 
 shell:
-  program: tmux-smart
+  program: /bin/zsh
+  args:
+  - -l
+  - -c
+  - "source ~/.zshrc; tmux-smart"
 
 font:
   normal:
