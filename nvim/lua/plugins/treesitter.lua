@@ -23,6 +23,7 @@ return {
 				"heex",
 				"eex",
 				"ruby",
+				"python",
 				"javascript",
 				"html",
 				"css",

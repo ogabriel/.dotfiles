@@ -28,6 +28,7 @@ return {
 				html = { require("formatter.filetypes.html").prettier },
 				sh = { require("formatter.filetypes.sh").shfmt },
 				go = { require("formatter.filetypes.go").gofmt },
+				python = { require("formatter.filetypes.python").black },
 				yaml = {
 					function()
 						return {
