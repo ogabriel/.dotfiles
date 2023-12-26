@@ -69,6 +69,17 @@ return {
 						}
 					end,
 				},
+				json = {
+					function()
+						return {
+							exe = "jq",
+							args = {
+								".",
+							},
+							stdin = true,
+						}
+					end,
+				},
 				-- eelixir = {
 				-- 	require("formatter.util").withl(require("formatter.defaults").prettier, "html"),
 				-- },
