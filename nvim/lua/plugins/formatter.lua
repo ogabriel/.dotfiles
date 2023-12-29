@@ -80,6 +80,15 @@ return {
 						}
 					end,
 				},
+				php = {
+					function()
+						return {
+							exe = "./vendor/bin/pint",
+							stdin = false,
+							ignore_exitcode = true,
+						}
+					end,
+				},
 				-- eelixir = {
 				-- 	require("formatter.util").withl(require("formatter.defaults").prettier, "html"),
 				-- },
