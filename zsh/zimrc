@@ -6,10 +6,12 @@ zmodule completion
 zmodule ohmyzsh/ohmyzsh --source lib/history.zsh
 zmodule ohmyzsh/ohmyzsh --source lib/directories.zsh
 
+zmodule ohmyzsh/ohmyzsh --root plugins/ag
+zmodule ohmyzsh/ohmyzsh --root plugins/fzf
+zmodule ohmyzsh/ohmyzsh --root plugins/ripgrep
+
 zmodule ohmyzsh/ohmyzsh --root plugins/aliases
 zmodule ohmyzsh/ohmyzsh --root plugins/tmux
-zmodule ohmyzsh/ohmyzsh --root plugins/fzf
-zmodule ohmyzsh/ohmyzsh --root plugins/ag
 zmodule ohmyzsh/ohmyzsh --root plugins/asdf
 zmodule ohmyzsh/ohmyzsh --root plugins/git
 zmodule ohmyzsh/ohmyzsh --root plugins/git-auto-fetch
