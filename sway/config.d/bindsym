@@ -178,6 +178,11 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# thinkpad audio
+bindsym XF86Messenger exec playerctl play-pause
+bindsym XF86Go exec playerctl next
+bindsym Cancel exec playerctl previous
+
 #
 # Backlight
 #
