@@ -1,35 +1,52 @@
 sensors:
 # CPU
-- chip: zenpower-pci-00c3
-  ids: ["Tdie", "Tctl"]
+# - chip: zenpower-pci-00c3
+#   ids: ["Tdie", "Tctl"]
+# # GPU
+# - chip: amdgpu-pci-0600
+#   ids: ["edge"]
+# # NVME
+# - chip: nvme-pci-0100
+#   ids: ["Composite"]
+# # Wifi
+# - chip: iwlwifi_1-virtual-0
+#   ids: ["temp1"]
+# CPU
+- hwmon: /sys/class/hwmon
+  name: thinkpad
+  indices: [1]
 # GPU
-- chip: amdgpu-pci-0600
-  ids: ["edge"]
+- hwmon: /sys/class/hwmon
+  name: amdgpu
+  indices: [1]
 # NVME
-- chip: nvme-pci-0100
-  ids: ["Composite"]
+- hwmon: /sys/class/hwmon
+  name: nvme
+  indices: [1]
 # Wifi
-- chip: iwlwifi_1-virtual-0
-  ids: ["temp1"]
-# - hwmon: /sys/class/hwmon
-#   name: nvme
-#   indices: [1]
-# - hwmon: /sys/class/hwmon
-#   name: iwlwifi_1
-#   indices: [1]
+- hwmon: /sys/class/hwmon
+  name: iwlwifi_1
+  indices: [1]
+  correction: [-10]
 
 fans:
 - tpacpi: /proc/acpi/ibm/fan
 
+# temperatures to touch (plastic)
+# 43 - can be touched forever
+# 48 - 10 minutes
+# 60 - 1 minute
+# 71 - 10s
+# 85 - 1s
 levels:
-- [0, 0, 40]
-- [1, 35, 42]
-- [2, 40, 45]
-- [3, 43, 47]
-- [4, 45, 52]
-- [5, 50, 57]
-- [6, 55, 63]
-- [7, 60, 75]
-- ["level full-speed", 70, 85]
-- ["level disengaged", 80, 32767]
+- [0, 0, 43]
+- [1, 43, 48]
+- [2, 46, 52]
+- [3, 50, 54]
+- [4, 54, 56]
+- [5, 56, 58]
+- [6, 58, 60]
+- [7, 60, 71]
+- ["level full-speed", 71, 85]
+- ["level disengaged", 85, 32767]
 # - ["level auto", 45, 75]
