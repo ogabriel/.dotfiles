@@ -15,7 +15,6 @@
             "memory",
             "temperature",
             "battery",
-            "custom/gpu-usage",
             "custom/weather",
             "keyboard-state",
             "custom/media",
