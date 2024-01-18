@@ -12,6 +12,9 @@ return {
 				"rust_analyzer",
 				"solargraph",
 				"pyright",
+				"tsserver",
+				"css-lsp",
+				"html-lsp",
 			},
 		})
 	end,
