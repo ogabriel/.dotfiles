@@ -23,6 +23,7 @@ return {
 			logging = true,
 			log_level = vim.log.levels.WARN,
 			filetype = {
+				["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 				elixir = { require("formatter.filetypes.elixir").mixformat },
 				lua = { require("formatter.filetypes.lua").stylua },
 				html = { require("formatter.filetypes.html").prettier },
@@ -92,9 +93,6 @@ return {
 				-- eelixir = {
 				-- 	require("formatter.util").withl(require("formatter.defaults").prettier, "html"),
 				-- },
-				["*"] = {
-					require("formatter.filetypes.any").remove_trailing_whitespace,
-				},
 			},
 		})
 	end,
