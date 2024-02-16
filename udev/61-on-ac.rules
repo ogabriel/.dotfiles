@@ -1,2 +1,0 @@
-# Rule for when switching to powersupply
-SUBSYSTEM=="power_supply",ENV{POWER_SUPPLY_ONLINE}=="1",RUN+="/usr/bin/ryzenadj --stapm-limit=25000 --fast-limit=30000 --slow-limit=27000 --apu-slow-limit=30000 --tctl-temp=65"
