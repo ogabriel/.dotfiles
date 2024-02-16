@@ -26,6 +26,7 @@ return {
 				elixir = { require("formatter.filetypes.elixir").mixformat },
 				lua = { require("formatter.filetypes.lua").stylua },
 				html = { require("formatter.filetypes.html").prettier },
+				css = { require("formatter.filetypes.css").prettier },
 				sh = { require("formatter.filetypes.sh").shfmt },
 				go = { require("formatter.filetypes.go").gofmt },
 				python = { require("formatter.filetypes.python").black },
