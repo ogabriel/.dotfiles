@@ -1,3 +1,3 @@
 #!/bin/sh
 
-yay --redownloadall --batchinstall --cleanafter=false --sudoloop --save
+yay --redownload --batchinstall --cleanafter=false --sudoloop --save
