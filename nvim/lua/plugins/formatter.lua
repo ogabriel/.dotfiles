@@ -26,6 +26,7 @@ return {
 				["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 				elixir = { require("formatter.filetypes.elixir").mixformat },
 				lua = { require("formatter.filetypes.lua").stylua },
+				javascript = { require("formatter.filetypes.javascript").prettier },
 				html = { require("formatter.filetypes.html").prettier },
 				css = { require("formatter.filetypes.css").prettier },
 				sh = { require("formatter.filetypes.sh").shfmt },
