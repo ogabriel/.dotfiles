@@ -90,11 +90,11 @@ return {
 			-- '<CMD>lua require("telescope.builtin").find_files({ hidden=true })<CR>',
 			'<CMD>lua require("telescope.builtin").find_files()<CR>',
 		},
-		{
-			"<c-f>",
-			mode = { "n" },
-			'<CMD>lua require("telescope.builtin").grep_string({ word_match = "-w", only_sort_text = true, search = "" })<CR>',
-		},
+		-- {
+		-- 	"<c-f>",
+		-- 	mode = { "n" },
+		-- 	'<CMD>lua require("telescope.builtin").grep_string({ word_match = "-w", only_sort_text = true, search = "" })<CR>',
+		-- },
 		{
 			"<c-f>",
 			mode = { "v" },
