@@ -30,6 +30,7 @@ return {
 				"yaml",
 				"dockerfile",
 				"json",
+				"latex",
 			},
 			ignore_install = { "help", "zsh" },
 			sync_install = false,
