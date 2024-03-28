@@ -13,7 +13,7 @@ return {
 				"solargraph",
 				"pyright",
 				"tsserver",
-				"csslsp",
+				"cssls",
 				"html",
 			},
 		})
