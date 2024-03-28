@@ -14,7 +14,7 @@ return {
 				"pyright",
 				"tsserver",
 				"csslsp",
-				"htmllsp",
+				"html",
 			},
 		})
 	end,
