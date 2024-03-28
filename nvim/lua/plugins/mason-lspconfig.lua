@@ -13,8 +13,8 @@ return {
 				"solargraph",
 				"pyright",
 				"tsserver",
-				"css-lsp",
-				"html-lsp",
+				"csslsp",
+				"htmllsp",
 			},
 		})
 	end,
