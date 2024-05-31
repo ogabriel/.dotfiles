@@ -1,3 +1,7 @@
+# completions
+zmodule zsh-users/zsh-completions --fpath src
+zmodule completion
+
 zmodule ohmyzsh/ohmyzsh --source lib/history.zsh
 zmodule ohmyzsh/ohmyzsh --source lib/directories.zsh
 
@@ -18,12 +22,9 @@ zmodule zsh-users/zsh-autosuggestions
 zmodule zdharma/fast-syntax-highlighting
 zmodule jeffreytse/zsh-vi-mode
 
-# completions
 zmodule ohmyzsh/ohmyzsh --root plugins/kubectl
 zmodule ohmyzsh/ohmyzsh --root plugins/docker --fpath completions
 zmodule ohmyzsh/ohmyzsh --root plugins/docker-compose --fpath _docker-compose
-zmodule zsh-users/zsh-completions --fpath src
-zmodule completion
 
 # theme
 zmodule sindresorhus/pure --source async.zsh --source pure.zsh
