@@ -5,7 +5,7 @@
 # - make (fzf)
 
 if [ -f /etc/arch-release ]; then
-    sudo pacman -S --noconfirm --needed git make ripgrep
+    sudo pacman -S --noconfirm --needed git ripgrep fzf
 fi
 
 if [ -d ~/.config/nvim ]; then
